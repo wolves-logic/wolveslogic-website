@@ -68,7 +68,7 @@ export default function CareerGuidancePage() {
       </section>
 
       {/* ── DESCRIPTION ── */}
-      <section style={{ padding: '4rem 2.5rem', background: '#0C0F11' }}>
+      <section style={{ padding: '4rem 2.5rem', background: '#0D1117' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '4rem', alignItems: 'start' }}>
           <div>
             <span className="section-label">About the Service</span>
@@ -111,7 +111,7 @@ export default function CareerGuidancePage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.25rem' }}>
             {audience.map(({ who, detail }) => (
-              <div key={who} style={{ background: '#162022', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 12, padding: '1.5rem' }}>
+              <div key={who} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 12, padding: '1.5rem' }}>
                 <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EEF0', marginBottom: 8 }}>{who}</h4>
                 <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>{detail}</p>
               </div>
@@ -121,7 +121,7 @@ export default function CareerGuidancePage() {
       </section>
 
       {/* ── PROCESS ── */}
-      <section style={{ padding: '5rem 2.5rem', background: '#0C0F11' }}>
+      <section style={{ padding: '5rem 2.5rem', background: '#0D1117' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <span className="section-label">How It Works</span>
           <div className="divider" />
@@ -130,7 +130,7 @@ export default function CareerGuidancePage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.5rem' }}>
             {steps.map(({ num, title, desc }) => (
-              <div key={num} style={{ background: '#162022', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '2rem' }}>
+              <div key={num} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '2rem' }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 42, fontWeight: 800, color: 'rgba(61,100,96,0.2)', lineHeight: 1, marginBottom: 16 }}>{num}</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
                 <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
@@ -143,7 +143,7 @@ export default function CareerGuidancePage() {
       {/* ── PRICING ── */}
       <section style={{ padding: '4rem 2.5rem' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ background: '#162022', border: '1px solid rgba(61,100,96,0.35)', borderRadius: 14, padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
+          <div style={{ background: '#161B22', border: '1px solid rgba(61,100,96,0.35)', borderRadius: 14, padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
               <span className="section-label">Pricing</span>
               <div className="divider" />
@@ -160,14 +160,14 @@ export default function CareerGuidancePage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ padding: '4rem 2.5rem 6rem', background: '#0C0F11' }}>
+      <section style={{ padding: '4rem 2.5rem 6rem', background: '#0D1117' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <span className="section-label">FAQ</span>
           <div className="divider" />
           <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, marginTop: 4, marginBottom: 36 }}>Common <span style={{ color: '#3D6460', fontStyle: 'italic' }}>Questions</span></h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             {faqs.map(({ q, a }) => (
-              <div key={q} style={{ background: '#162022', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '1.75rem' }}>
+              <div key={q} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '1.75rem' }}>
                 <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EEF0', marginBottom: 10 }}>{q}</h4>
                 <p style={{ color: '#7A9490', fontSize: 15, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{a}</p>
               </div>

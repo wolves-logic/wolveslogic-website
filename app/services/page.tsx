@@ -67,7 +67,7 @@ export default function ServicesPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {services.map(({ icon: Icon, accent, title, tagline, desc, features, audience, href }, idx) => (
             <div key={title} style={{
-              background: '#1A2A28',
+              background: '#161B22',
               border: `1px solid ${idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(45,74,71,0.4)'}`,
               borderRadius: 16, padding: '2.5rem',
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
@@ -136,7 +136,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', background: '#0F1614', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', background: '#0D1117', position: 'relative', overflow: 'hidden' }}>
         <div className="glow-orb" style={{ width: 400, height: 400, background: 'rgba(196,121,122,0.08)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: 700, marginBottom: 14 }}>

@@ -29,7 +29,7 @@ export default function ContactPage() {
   const whatsappMsg = encodeURIComponent(`Hi WolvesLogic! I am interested in your services. My name is ${form.name || '[Your Name]'} and I need help with ${form.service || 'your services'}.`);
 
   const inputStyle: React.CSSProperties = {
-    width: '100%', background: '#0F1614', border: '1px solid rgba(45,74,71,0.4)',
+    width: '100%', background: '#0D1117', border: '1px solid rgba(45,74,71,0.4)',
     borderRadius: 8, padding: '13px 16px', color: '#F0EEF0', fontSize: 15,
     outline: 'none', transition: 'border-color 0.2s', fontFamily: 'DM Sans, sans-serif',
   };
@@ -120,14 +120,14 @@ export default function ContactPage() {
               </div>
             </a>
 
-            <div style={{ background: '#1A2A28', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 10, padding: '1.25rem 1.5rem' }}>
+            <div style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 10, padding: '1.25rem 1.5rem' }}>
               <p style={{ color: '#C4797A', fontWeight: 600, fontSize: 14, marginBottom: 8, fontFamily: 'DM Sans, sans-serif' }}>Response Time</p>
               <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>WhatsApp & calls — within hours. Email — within 24 hours. We're here to help!</p>
             </div>
           </div>
 
           {/* ── Contact form ── */}
-          <div style={{ background: '#1A2A28', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 16, padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 16, padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #C4797A, #2D4A47, transparent)' }} />
 
             {sent ? (

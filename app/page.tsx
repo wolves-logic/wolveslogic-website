@@ -103,7 +103,7 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section style={{ padding: '6rem 2.5rem', background: '#0F1614' }}>
+      <section style={{ padding: '6rem 2.5rem', background: '#0D1117' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ marginBottom: '4rem' }}>
             <span className="section-label">What We Offer</span>
@@ -166,7 +166,7 @@ export default function HomePage() {
           {/* Testimonials */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             {testimonials.map(t => (
-              <div key={t.name} style={{ background: '#1A2A28', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 12, padding: '1.75rem' }}>
+              <div key={t.name} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 12, padding: '1.75rem' }}>
                 <div style={{ display: 'flex', gap: 3, marginBottom: 14 }}>
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#C4797A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -189,7 +189,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '6rem 2.5rem', background: '#0F1614', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: '6rem 2.5rem', background: '#0D1117', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(45,74,71,0.18)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
         <div className="glow-orb" style={{ width: 300, height: 300, background: 'rgba(196,121,122,0.08)', top: '30%', right: '10%', animationDelay: '2s' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 560, margin: '0 auto' }}>

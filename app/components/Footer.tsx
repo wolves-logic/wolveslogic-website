@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: '#060A09', borderTop: '1px solid rgba(45,74,71,0.3)', padding: '4rem 2.5rem 2.5rem' }}>
+    <footer style={{ background: '#0A0D10', borderTop: '1px solid rgba(45,74,71,0.3)', padding: '4rem 2.5rem 2.5rem' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3.5rem' }}>
 
@@ -25,11 +25,17 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 700, color: '#C4797A', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 18 }}>Services</h4>
-            {['Assignment Help', 'IT Services for SMEs', 'Job Support', 'Career Guidance', 'Online Tutoring'].map(s => (
-              <Link key={s} href="/services" style={{ display: 'block', color: '#4A6460', textDecoration: 'none', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif', transition: 'color 0.2s' }}
+            {[
+              ['Assignment Help', '/services/assignment-help'],
+              ['IT Services for SMEs', '/services/it-services'],
+              ['Job Support', '/services/job-support'],
+              ['Career Guidance', '/services/career-guidance'],
+              ['Online Tutoring', '/services/online-tutoring'],
+            ].map(([label, href]) => (
+              <Link key={label} href={href} style={{ display: 'block', color: '#4A6460', textDecoration: 'none', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = '#7A9490'}
                 onMouseLeave={e => (e.target as HTMLElement).style.color = '#4A6460'}
-              >{s}</Link>
+              >{label}</Link>
             ))}
           </div>
 

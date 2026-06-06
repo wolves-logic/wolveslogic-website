@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "WolvesLogic – Empowering Minds. Enabling Careers.",
   description: "WolvesLogic provides Assignment Help, IT Services for SMEs, Job Support, Career Guidance, and Online Tutoring to students, professionals, and corporates.",
   keywords: "assignment help, IT services, job support, career guidance, online tutoring, WolvesLogic, Harviera IT Solutions",
+  icons: { icon: '/favicon.ico', apple: '/apple-icon.png' },
   openGraph: {
     title: "WolvesLogic – Empowering Minds. Enabling Careers.",
     description: "Expert support for students, IT professionals, and corporate employees.",
