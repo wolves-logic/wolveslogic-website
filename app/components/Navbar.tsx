@@ -52,17 +52,29 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none' }}>
-          <img
-            src="/logo.png"
-            alt="WolvesLogic"
-            style={{
-              width: 48, height: 48,
-              objectFit: 'cover',
-              objectPosition: 'top center',
-              borderRadius: '50%',
-              background: 'white',
-            }}
-          />
+          <div style={{
+            width: 48,
+            height: 48,
+            borderRadius: '50%',
+            overflow: 'hidden',
+            flexShrink: 0,
+            background: '#fff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <img
+              src="/logo.png"
+              alt="WolvesLogic"
+              style={{
+                width: '180%',
+                height: '180%',
+                objectFit: 'cover',
+                objectPosition: '50% 35%',
+                marginTop: '-10%',
+              }}
+            />
+          </div>
           <div style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 20, color: '#FFFFFF', letterSpacing: '-0.01em', lineHeight: 1.1 }}>
             Wolves<span style={{ color: '#C4797A' }}>Logic</span>
           </div>
