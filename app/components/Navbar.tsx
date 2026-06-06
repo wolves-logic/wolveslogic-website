@@ -43,7 +43,7 @@ export default function Navbar() {
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
       padding: '0 2.5rem',
-      background: scrolled ? 'rgba(13,17,23,0.92)' : 'transparent',
+      background: scrolled ? '#0D1117' : 'transparent',
       backdropFilter: scrolled ? 'blur(24px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(45,74,71,0.4)' : '1px solid transparent',
       transition: 'all 0.4s ease',
@@ -52,29 +52,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none' }}>
-          <div style={{
-            width: 48,
-            height: 48,
-            borderRadius: '50%',
-            overflow: 'hidden',
-            flexShrink: 0,
-            background: '#fff',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <img
-              src="/logo.png"
-              alt="WolvesLogic"
-              style={{
-                width: '180%',
-                height: '180%',
-                objectFit: 'cover',
-                objectPosition: '50% 35%',
-                marginTop: '-10%',
-              }}
-            />
-          </div>
+          <img src="/logo-symbol.png" alt="WolvesLogic" style={{ width: 48, height: 48, borderRadius: '50%' }} />
           <div style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 20, color: '#FFFFFF', letterSpacing: '-0.01em', lineHeight: 1.1 }}>
             Wolves<span style={{ color: '#C4797A' }}>Logic</span>
           </div>
@@ -187,7 +165,7 @@ export default function Navbar() {
       {/* Mobile nav */}
       {open && (
         <div style={{
-          background: 'rgba(13,17,23,0.98)', borderTop: '1px solid rgba(45,74,71,0.3)',
+          background: '#0D1117', borderTop: '1px solid rgba(45,74,71,0.3)',
           padding: '1rem 2.5rem 2rem',
         }}>
           <Link href="/" onClick={() => setOpen(false)} style={{ display: 'block', color: '#7A9490', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(45,74,71,0.15)' }}>Home</Link>

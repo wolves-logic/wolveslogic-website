@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: '#0A0D10', borderTop: '1px solid rgba(45,74,71,0.3)', padding: '4rem 2.5rem 2.5rem' }}>
+    <footer style={{ background: '#0D1117', borderTop: '1px solid rgba(45,74,71,0.3)', padding: '4rem 2.5rem 2.5rem' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3.5rem' }}>
 
