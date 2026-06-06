@@ -48,27 +48,12 @@ export default function AboutPage() {
             <p style={{ color: '#7A9490', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               WolvesLogic was founded by Mallachary Lingampet — a passionate IT professional and educator who saw a gap in accessible, high-quality support for students and professionals alike.
             </p>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
-              The name WolvesLogic carries a dual meaning: <strong style={{ color: '#F0EEF0' }}>W</strong> for Wolves and <strong style={{ color: '#F0EEF0' }}>L</strong> for Logic — and when you reverse the W, it becomes <strong style={{ color: '#C4797A' }}>M</strong>, standing for Mallachary. Together, <strong style={{ color: '#F0EEF0' }}>ML</strong> — a personal signature hidden within the brand.
-            </p>
             <p style={{ color: '#7A9490', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               Under Harviera IT Solutions LLP, WolvesLogic operates as a freelancing brand delivering real value through expertise, trust, and commitment.
             </p>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            {/* Logo meaning card */}
-            <div style={{ background: '#1A2A28', border: '1px solid rgba(196,121,122,0.25)', borderRadius: 14, padding: '2rem', position: 'relative', overflow: 'hidden' }}>
-              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #C4797A, transparent)' }} />
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-                <span style={{ fontSize: 22 }}>🐺</span>
-                <h3 style={{ fontSize: 18, fontWeight: 600, fontFamily: 'Playfair Display, serif' }}>The Logo's Hidden Meaning</h3>
-              </div>
-              <p style={{ color: '#7A9490', lineHeight: 1.85, fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>
-                The <strong style={{ color: '#C4797A' }}>W</strong> stands for <em>Wolves</em>. Flip it — it becomes <strong style={{ color: '#D4908F' }}>M</strong> for <em>Mallachary</em>. The <strong style={{ color: '#3D6460' }}>L</strong> stands for both <em>Logic</em> and <em>Lingampet</em>. One mark, two identities — the brand and its founder.
-              </p>
-            </div>
-
             {/* Company card */}
             <div style={{ background: '#1A2A28', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 14, padding: '2rem', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #2D4A47, transparent)' }} />

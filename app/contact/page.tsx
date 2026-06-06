@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import { Phone, Mail, MessageCircle, Send, CheckCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '91XXXXXXXXXX';
-const PHONE_NUMBER = '+91XXXXXXXXXX';
-const EMAIL = 'hello@wolveslogic.com';
+const WHATSAPP_NUMBER = '919959691347';
+const PHONE_NUMBER = '+91 9959691347';
+const EMAIL = 'wolveslogicit@gmail.com';
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' });
@@ -16,7 +16,12 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 1200));
+    const subject = encodeURIComponent(`WolvesLogic Enquiry – ${form.service || 'General'} from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || 'Not provided'}\nService: ${form.service || 'Not specified'}\n\nMessage:\n${form.message}`
+    );
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    await new Promise(r => setTimeout(r, 800));
     setSent(true);
     setLoading(false);
   };

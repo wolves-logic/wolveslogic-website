@@ -47,15 +47,14 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 700, color: '#C4797A', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 18 }}>Contact</h4>
-            <p style={{ color: '#4A6460', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif' }}>+91 XXXXXXXXXX</p>
-            <p style={{ color: '#4A6460', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif' }}>hello@wolveslogic.com</p>
+            <p style={{ color: '#4A6460', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif' }}>+91 9959691347</p>
+            <p style={{ color: '#4A6460', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif' }}>wolveslogicit@gmail.com</p>
             <p style={{ color: '#4A6460', fontSize: 14, fontFamily: 'DM Sans, sans-serif' }}>WhatsApp available</p>
           </div>
         </div>
 
         <div style={{ borderTop: '1px solid rgba(45,74,71,0.2)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ color: '#2D4040', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}>© {year} WolvesLogic · Harviera IT Solutions LLP. All rights reserved.</p>
-          <p style={{ color: '#2D4040', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}>Crafted by Mallachary Lingampet</p>
         </div>
       </div>
     </footer>
