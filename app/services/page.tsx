@@ -4,35 +4,35 @@ import { BookOpen, Monitor, Briefcase, Compass, GraduationCap, ArrowRight, Check
 
 const services = [
   {
-    icon: BookOpen, accent: '#C4797A', title: 'Assignment Help',
+    icon: BookOpen, accent: '#C4797A', title: 'Assignment Help', href: '/services/assignment-help',
     tagline: 'Academic excellence, delivered on time.',
     desc: 'We support students across undergraduate, postgraduate, and doctoral levels with high-quality academic work.',
     features: ['Essays & Reports', 'Dissertations & Theses', 'Coding Assignments', 'Case Studies', 'Research Papers', 'Presentations'],
     audience: 'Students at any level',
   },
   {
-    icon: Monitor, accent: '#3D6460', title: 'IT Services for SMEs',
+    icon: Monitor, accent: '#3D6460', title: 'IT Services for SMEs', href: '/services/it-services',
     tagline: 'Technology that scales with your business.',
     desc: 'Comprehensive IT support and consulting for small and medium enterprises looking to grow smarter.',
     features: ['Cloud Setup & Migration', 'Web & App Development', 'IT Infrastructure', 'Cybersecurity Basics', 'Software Consulting', 'Technical Support'],
     audience: 'Small & medium businesses',
   },
   {
-    icon: Briefcase, accent: '#C4797A', title: 'Job Support',
+    icon: Briefcase, accent: '#C4797A', title: 'Job Support', href: '/services/job-support',
     tagline: 'Your safety net in production.',
     desc: 'Real-time job support for IT professionals — from daily tasks to critical deliveries, we are right there with you.',
     features: ['Production Issue Resolution', 'Sprint Support', 'Code Review & Debugging', 'Interview Preparation', 'Client Deliverable Support', 'After-hours Availability'],
     audience: 'Working IT professionals',
   },
   {
-    icon: Compass, accent: '#3D6460', title: 'Career Guidance',
+    icon: Compass, accent: '#3D6460', title: 'Career Guidance', href: '/services/career-guidance',
     tagline: 'Navigate your IT career with clarity.',
     desc: 'Personalised mentoring to help you choose the right path, upskill, and land the job you deserve.',
     features: ['Career Roadmap Planning', 'Resume & LinkedIn Optimisation', 'Mock Interviews', 'Skill Gap Analysis', 'Domain Transition Guidance', 'Salary Negotiation Tips'],
     audience: 'Freshers & experienced professionals',
   },
   {
-    icon: GraduationCap, accent: '#C4797A', title: 'Online Tutoring',
+    icon: GraduationCap, accent: '#C4797A', title: 'Online Tutoring', href: '/services/online-tutoring',
     tagline: 'Learning that fits your schedule.',
     desc: 'Live, personalised tutoring sessions for corporate employees and individuals who want to upskill fast.',
     features: ['1:1 Live Sessions', 'Batch Corporate Training', 'Custom Curriculum', 'Practical Hands-on Labs', 'Post-session Notes', 'Progress Tracking'],
@@ -65,7 +65,7 @@ export default function ServicesPage() {
       {/* ── SERVICE CARDS ── */}
       <section style={{ padding: '2rem 2.5rem 6rem' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          {services.map(({ icon: Icon, accent, title, tagline, desc, features, audience }, idx) => (
+          {services.map(({ icon: Icon, accent, title, tagline, desc, features, audience, href }, idx) => (
             <div key={title} style={{
               background: '#1A2A28',
               border: `1px solid ${idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(45,74,71,0.4)'}`,
@@ -107,16 +107,28 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-                <Link href="/contact" style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 28,
-                  background: accent, color: '#fff', textDecoration: 'none',
-                  padding: '11px 22px', borderRadius: 6, fontSize: 14, fontWeight: 600,
-                  fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em',
-                  transition: 'opacity 0.2s',
-                }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = '0.85'}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
-                >Enquire Now <ArrowRight size={15} /></Link>
+                <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
+                  <Link href={href} style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 8,
+                    background: 'transparent', color: accent, textDecoration: 'none',
+                    padding: '10px 20px', borderRadius: 6, fontSize: 14, fontWeight: 600,
+                    fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em',
+                    border: `1px solid ${accent}55`, transition: 'all 0.2s',
+                  }}
+                    onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = accent + '15'; }}
+                    onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = 'transparent'; }}
+                  >Learn More <ArrowRight size={14} /></Link>
+                  <Link href="/contact" style={{
+                    display: 'inline-flex', alignItems: 'center', gap: 8,
+                    background: accent, color: '#fff', textDecoration: 'none',
+                    padding: '11px 22px', borderRadius: 6, fontSize: 14, fontWeight: 600,
+                    fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em',
+                    transition: 'opacity 0.2s',
+                  }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = '0.85'}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
+                  >Enquire Now <ArrowRight size={15} /></Link>
+                </div>
               </div>
             </div>
           ))}

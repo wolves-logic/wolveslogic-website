@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
       padding: '0 2.5rem',
-      background: scrolled ? 'rgba(10,10,10,0.95)' : 'transparent',
+      background: scrolled ? 'rgba(15,18,20,0.95)' : 'transparent',
       backdropFilter: scrolled ? 'blur(24px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(45,74,71,0.4)' : '1px solid transparent',
       transition: 'all 0.4s ease',
@@ -33,12 +33,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none' }}>
-          <img src="/logo.png" alt="WolvesLogic" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
-          <div>
-            <div style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 20, color: '#FFFFFF', letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-              Wolves<span style={{ color: '#C4797A' }}>Logic</span>
-            </div>
-            <div style={{ fontSize: 9, color: '#4A6460', letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>Harviera IT Solutions</div>
+          <img src="/logo.png" alt="WolvesLogic" style={{ height: 52, width: 52, objectFit: 'cover', objectPosition: 'center top', borderRadius: '50%' }} />
+          <div style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 20, color: '#FFFFFF', letterSpacing: '-0.01em', lineHeight: 1.1 }}>
+            Wolves<span style={{ color: '#C4797A' }}>Logic</span>
           </div>
         </Link>
 
@@ -75,7 +72,7 @@ export default function Navbar() {
       {/* Mobile nav */}
       {open && (
         <div style={{
-          background: 'rgba(10,10,10,0.98)', borderTop: '1px solid rgba(45,74,71,0.3)',
+          background: 'rgba(15,18,20,0.98)', borderTop: '1px solid rgba(45,74,71,0.3)',
           padding: '1rem 2.5rem 2rem',
         }}>
           {navLinks.map(link => (
