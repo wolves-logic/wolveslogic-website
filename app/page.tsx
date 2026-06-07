@@ -117,9 +117,12 @@ export default function HomePage() {
               </div>
             </div>
             <div className="glass" style={{ border: '1px solid rgba(196,121,122,0.2)', borderRadius: 12, padding: '1.25rem 1.5rem', display: 'flex', gap: 12, alignItems: 'center' }}>
-              <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(196,121,122,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ fontSize: 18 }}>🐺</span>
-              </div>
+              <div style={{
+                width: 40, height: 40, borderRadius: '50%',
+                background: 'linear-gradient(135deg, #3D7A74, #C4797A)',
+                display: 'flex', alignItems: 'center',
+                justifyContent: 'center', fontSize: 18, flexShrink: 0
+              }}>🐺</div>
               <div>
                 <p style={{ color: '#F0EDE8', fontSize: 14, fontFamily: 'DM Sans, sans-serif', fontWeight: 500 }}>Free initial consultation</p>
                 <p style={{ color: 'rgba(240,237,232,0.35)', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}>No commitment required</p>

@@ -56,16 +56,15 @@ export default function Navbar() {
           alignItems: 'center',
           gap: 10,
           textDecoration: 'none',
+          height: 52,
         }}>
           <img
             src="/logo-symbol.png"
             alt="WolvesLogic"
             style={{
-              width: 48,
-              height: 48,
+              width: 52,
+              height: 52,
               objectFit: 'contain',
-              flexShrink: 0,
-              verticalAlign: 'middle',
             }}
           />
           <span style={{
@@ -73,12 +72,9 @@ export default function Navbar() {
             fontSize: 22,
             fontWeight: 700,
             color: '#F0EDE8',
-            alignSelf: 'center',
-            lineHeight: 1,
-            paddingTop: 0,
-            paddingBottom: 0,
-            margin: 0,
+            lineHeight: '52px',
             whiteSpace: 'nowrap',
+            display: 'block',
           }}>
             Wolves<span style={{color:'#C4797A'}}>Logic</span>
           </span>
