@@ -55,6 +55,8 @@ export default function Navbar() {
           alignItems: 'center',
           gap: 0.5,
           textDecoration: 'none',
+          outline: 'none',
+          WebkitTapHighlightColor: 'transparent',
         }}>
           <img
             src="/logo-symbol.png"

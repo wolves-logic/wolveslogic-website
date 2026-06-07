@@ -42,10 +42,11 @@ h1, h2, h3, h4, h5 {
   letter-spacing: -0.01em;
   color: var(--text);
 }
+a { -webkit-tap-highlight-color: transparent; }
 a:focus, button:focus { outline: none; }
 a:focus-visible {
-  outline: 2px solid rgba(61,122,116,0.5);
-  border-radius: 6px;
+  outline: 2px solid rgba(61,122,116,0.4);
+  border-radius: 8px;
 }
 ::selection { background: var(--accent-dim); color: #fff; }
 ::-webkit-scrollbar { width: 5px; }

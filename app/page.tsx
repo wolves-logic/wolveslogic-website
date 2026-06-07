@@ -6,11 +6,11 @@ import AnimatedCounter from './components/AnimatedCounter';
 import FAQAccordion from './components/FAQAccordion';
 
 const services = [
-  { icon: BookOpen, title: 'Assignment Help', desc: 'Expert academic support across all subjects — essays, dissertations, coding assignments, and more.', img: '/images/assignment-help.jpg' },
-  { icon: Monitor, title: 'IT Services for SMEs', desc: 'End-to-end IT solutions for small and medium enterprises — infrastructure, cloud, and software.', img: '/images/it-services.jpg' },
-  { icon: Briefcase, title: 'Job Support', desc: 'Real-time production support for IT professionals — sprint to delivery with confidence.', img: '/images/job-support.jpg' },
-  { icon: Compass, title: 'Career Guidance', desc: 'Personalised roadmaps for IT career transitions, skill upgrades, and interview preparation.', img: '/images/career-guidance.jpg' },
-  { icon: GraduationCap, title: 'Online Tutoring', desc: 'Corporate learning programs — tailored training delivered live for teams and individuals.', img: '/images/online-tutoring.jpg' },
+  { icon: BookOpen, title: 'Assignment Help', desc: 'Expert academic support across all subjects — essays, dissertations, coding assignments, and more.', img: '/images/assignment-help.jpg', href: '/services/assignment-help' },
+  { icon: Monitor, title: 'IT Services for SMEs', desc: 'End-to-end IT solutions for small and medium enterprises — infrastructure, cloud, and software.', img: '/images/it-services.jpg', href: '/services/it-services' },
+  { icon: Briefcase, title: 'Job Support', desc: 'Real-time production support for IT professionals — sprint to delivery with confidence.', img: '/images/job-support.jpg', href: '/services/job-support' },
+  { icon: Compass, title: 'Career Guidance', desc: 'Personalised roadmaps for IT career transitions, skill upgrades, and interview preparation.', img: '/images/career-guidance.jpg', href: '/services/career-guidance' },
+  { icon: GraduationCap, title: 'Online Tutoring', desc: 'Corporate learning programs — tailored training delivered live for teams and individuals.', img: '/images/online-tutoring.jpg', href: '/services/online-tutoring' },
 ];
 
 const stats = [
@@ -186,8 +186,8 @@ export default function HomePage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px,1fr))', gap: '1.5rem' }}>
-            {services.map(({ icon: Icon, title, desc, img }, i) => (
-              <div key={title} className="card" style={{ cursor: 'default', padding: 0, overflow: 'hidden' }}>
+            {services.map(({ icon: Icon, title, desc, img, href }, i) => (
+              <Link key={title} href={href} className="card" style={{ cursor: 'pointer', padding: 0, overflow: 'hidden', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <div style={{ position: 'relative', width: '100%', height: 180 }}>
                   <Image
                     src={img}
@@ -205,7 +205,7 @@ export default function HomePage() {
                   <h3 style={{ fontSize: 19, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
                   <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

@@ -69,18 +69,22 @@ export default function AssignmentHelpPage() {
           </div>
 
           <div className="fade-up-3">
-            <div className="glass-strong" style={{ borderRadius: 18, padding: 14 }}>
-              <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', borderRadius: 14, overflow: 'hidden' }}>
-                <Image
-                  src="/images/assignment-help.jpg"
-                  alt="Student receiving expert academic assignment help from WolvesLogic"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 45vw"
-                  style={{ objectFit: 'cover' }}
-                />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,15,14,0) 50%, rgba(10,15,14,0.6) 100%)' }} />
-              </div>
+            <div style={{
+              position: 'relative',
+              height: 'clamp(300px, 50vh, 520px)',
+              borderRadius: 20,
+              overflow: 'hidden',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              <Image
+                src="/images/assignment-help.jpg"
+                alt="Student receiving expert academic assignment help from WolvesLogic"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 45vw"
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,15,14,0) 50%, rgba(10,15,14,0.6) 100%)' }} />
             </div>
           </div>
         </div>
