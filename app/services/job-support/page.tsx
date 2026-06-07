@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const included = [
@@ -45,24 +46,42 @@ export default function JobSupportPage() {
         <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(196,121,122,0.12)', top: -100, right: -100 }} />
         <div className="glow-orb" style={{ width: 280, height: 280, background: 'rgba(61,122,116,0.1)', bottom: 0, left: 0, animationDelay: '2s' }} />
 
-        <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(240,237,232,0.5)', fontSize: 14, textDecoration: 'none', marginBottom: 28, fontFamily: 'DM Sans, sans-serif' }}>
-            ← Back to Services
-          </Link>
-          <div className="fade-up-1">
-            <span className="section-label">Job Support</span>
-            <div className="divider" />
+        <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div>
+            <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(240,237,232,0.5)', fontSize: 14, textDecoration: 'none', marginBottom: 28, fontFamily: 'DM Sans, sans-serif' }}>
+              ← Back to Services
+            </Link>
+            <div className="fade-up-1">
+              <span className="section-label">Job Support</span>
+              <div className="divider" />
+            </div>
+            <h1 className="fade-up-2" style={{ fontSize: 'clamp(2.8rem,6vw,4.8rem)', fontWeight: 700, marginTop: 4, marginBottom: 24, maxWidth: 780, lineHeight: 1.1 }}>
+              Your Safety Net{' '}
+              <span style={{ color: '#C4797A', fontStyle: 'italic' }}>in Production</span>
+            </h1>
+            <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, maxWidth: 620, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', marginBottom: 36 }}>
+              Real-time technical support for IT professionals when it matters most. We're your expert backup for production incidents, sprint crunches, and client deliverables.
+            </p>
+            <div className="fade-up-4" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+              <Link href="/contact" className="btn-primary">Get Immediate Help <ArrowRight size={17} /></Link>
+              <a href="https://wa.me/919959691347" target="_blank" rel="noopener noreferrer" className="btn-secondary">WhatsApp Now</a>
+            </div>
           </div>
-          <h1 className="fade-up-2" style={{ fontSize: 'clamp(2.8rem,6vw,4.8rem)', fontWeight: 700, marginTop: 4, marginBottom: 24, maxWidth: 780, lineHeight: 1.1 }}>
-            Your Safety Net{' '}
-            <span style={{ color: '#C4797A', fontStyle: 'italic' }}>in Production</span>
-          </h1>
-          <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, maxWidth: 620, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', marginBottom: 36 }}>
-            Real-time technical support for IT professionals when it matters most. We're your expert backup for production incidents, sprint crunches, and client deliverables.
-          </p>
-          <div className="fade-up-4" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Link href="/contact" className="btn-primary">Get Immediate Help <ArrowRight size={17} /></Link>
-            <a href="https://wa.me/919959691347" target="_blank" rel="noopener noreferrer" className="btn-secondary">WhatsApp Now</a>
+
+          <div className="fade-up-3">
+            <div className="glass-strong" style={{ borderRadius: 18, padding: 14 }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 5', borderRadius: 14, overflow: 'hidden' }}>
+                <Image
+                  src="/images/job-support.jpg"
+                  alt="IT professional receiving real-time job support and production assistance from WolvesLogic"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  style={{ objectFit: 'cover' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,15,14,0) 50%, rgba(10,15,14,0.6) 100%)' }} />
+              </div>
+            </div>
           </div>
         </div>
       </section>

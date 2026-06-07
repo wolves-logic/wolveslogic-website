@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 const timeline = [
@@ -57,6 +58,15 @@ export default function AboutPage() {
     <>
       {/* ── HERO ── */}
       <section style={{ padding: '10rem 2.5rem 5rem', position: 'relative', overflow: 'hidden' }}>
+        <Image
+          src="/images/transformation.jpg"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', opacity: 0.12 }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, #050a09 0%, rgba(5,10,9,0.55) 45%, #050a09 100%)' }} />
         <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(61,122,116,0.18)', top: -100, right: -100 }} />
         <div className="glow-orb" style={{ width: 280, height: 280, background: 'rgba(196,121,122,0.09)', bottom: 0, left: 0, animationDelay: '3s' }} />
 
@@ -77,7 +87,27 @@ export default function AboutPage() {
 
       {/* ── FOUNDER ── */}
       <section style={{ padding: '2rem 2.5rem 5rem' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '4rem', alignItems: 'start' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div className="glass-strong" style={{ borderRadius: 18, padding: 14, marginBottom: '4rem' }}>
+            <div style={{ position: 'relative', width: '100%', aspectRatio: '21 / 8', borderRadius: 14, overflow: 'hidden' }}>
+              <Image
+                src="/images/it-services.jpg"
+                alt="A decade of hands-on IT experience — the foundation of WolvesLogic"
+                fill
+                sizes="100vw"
+                style={{ objectFit: 'cover' }}
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(10,15,14,0.85) 0%, rgba(10,15,14,0.25) 55%, rgba(10,15,14,0.05) 100%)' }} />
+              <div style={{ position: 'absolute', left: 28, bottom: 24, maxWidth: 460 }}>
+                <p style={{ color: '#C4797A', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', fontWeight: 700, marginBottom: 8 }}>The Founder's Story</p>
+                <p style={{ color: '#F0EDE8', fontSize: 17, lineHeight: 1.6, fontFamily: 'DM Sans, sans-serif', fontWeight: 500 }}>
+                  A decade of hands-on IT experience — the foundation everything at WolvesLogic is built on.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '4rem', alignItems: 'start' }}>
           <div>
             <div style={{ marginBottom: 28, position: 'relative', display: 'inline-block' }}>
               <div style={{ width: 96, height: 96, borderRadius: '50%', background: 'linear-gradient(135deg,#3D7A74,#C4797A)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 34, fontFamily: 'Playfair Display, serif', fontWeight: 700, color: '#fff' }}>ML</div>
@@ -108,6 +138,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>

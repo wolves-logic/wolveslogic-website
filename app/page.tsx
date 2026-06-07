@@ -1,15 +1,16 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, BookOpen, Monitor, Briefcase, Compass, GraduationCap, CheckCircle, MessageCircle, Search, UserCheck, PackageCheck, Zap } from 'lucide-react';
 import AnimatedCounter from './components/AnimatedCounter';
 import FAQAccordion from './components/FAQAccordion';
 
 const services = [
-  { icon: BookOpen, title: 'Assignment Help', desc: 'Expert academic support across all subjects — essays, dissertations, coding assignments, and more.' },
-  { icon: Monitor, title: 'IT Services for SMEs', desc: 'End-to-end IT solutions for small and medium enterprises — infrastructure, cloud, and software.' },
-  { icon: Briefcase, title: 'Job Support', desc: 'Real-time production support for IT professionals — sprint to delivery with confidence.' },
-  { icon: Compass, title: 'Career Guidance', desc: 'Personalised roadmaps for IT career transitions, skill upgrades, and interview preparation.' },
-  { icon: GraduationCap, title: 'Online Tutoring', desc: 'Corporate learning programs — tailored training delivered live for teams and individuals.' },
+  { icon: BookOpen, title: 'Assignment Help', desc: 'Expert academic support across all subjects — essays, dissertations, coding assignments, and more.', img: '/images/assignment-help.jpg' },
+  { icon: Monitor, title: 'IT Services for SMEs', desc: 'End-to-end IT solutions for small and medium enterprises — infrastructure, cloud, and software.', img: '/images/it-services.jpg' },
+  { icon: Briefcase, title: 'Job Support', desc: 'Real-time production support for IT professionals — sprint to delivery with confidence.', img: '/images/job-support.jpg' },
+  { icon: Compass, title: 'Career Guidance', desc: 'Personalised roadmaps for IT career transitions, skill upgrades, and interview preparation.', img: '/images/career-guidance.jpg' },
+  { icon: GraduationCap, title: 'Online Tutoring', desc: 'Corporate learning programs — tailored training delivered live for teams and individuals.', img: '/images/online-tutoring.jpg' },
 ];
 
 const stats = [
@@ -101,8 +102,21 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: floating stats card */}
+          {/* Right: image showcase + floating stats card */}
           <div className="fade-up-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div className="glass-strong" style={{ borderRadius: 16, padding: 14 }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 11', borderRadius: 12, overflow: 'hidden' }}>
+                <Image
+                  src="/images/job-support.jpg"
+                  alt="IT professional providing real-time job support for WolvesLogic clients"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,15,14,0) 55%, rgba(10,15,14,0.65) 100%)' }} />
+              </div>
+            </div>
             <div className="glass-strong" style={{ borderRadius: 16, padding: '2rem' }}>
               <p style={{ color: 'rgba(240,237,232,0.35)', fontSize: 12, letterSpacing: '0.15em', textTransform: 'uppercase', fontFamily: 'DM Sans, sans-serif', marginBottom: 20 }}>By the numbers</p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
@@ -172,13 +186,25 @@ export default function HomePage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px,1fr))', gap: '1.5rem' }}>
-            {services.map(({ icon: Icon, title, desc }, i) => (
-              <div key={title} className="card" style={{ cursor: 'default' }}>
-                <div style={{ width: 46, height: 46, borderRadius: 10, background: i % 2 === 0 ? 'rgba(196,121,122,0.12)' : 'rgba(61,122,116,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                  <Icon size={22} color={i % 2 === 0 ? '#C4797A' : '#3D7A74'} />
+            {services.map(({ icon: Icon, title, desc, img }, i) => (
+              <div key={title} className="card" style={{ cursor: 'default', padding: 0, overflow: 'hidden' }}>
+                <div style={{ position: 'relative', width: '100%', height: 180 }}>
+                  <Image
+                    src={img}
+                    alt={title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,15,14,0.05) 40%, rgba(10,15,14,0.85) 100%)' }} />
+                  <div style={{ position: 'absolute', bottom: 14, left: 20, width: 46, height: 46, borderRadius: 10, background: i % 2 === 0 ? 'rgba(196,121,122,0.18)' : 'rgba(61,122,116,0.3)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Icon size={22} color={i % 2 === 0 ? '#C4797A' : '#3D7A74'} />
+                  </div>
                 </div>
-                <h3 style={{ fontSize: 19, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
-                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
+                <div style={{ padding: '1.75rem' }}>
+                  <h3 style={{ fontSize: 19, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
+                  <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -327,6 +353,15 @@ export default function HomePage() {
 
       {/* ── CTA ── */}
       <section style={{ padding: '6rem 2.5rem', background: '#0A0F0E', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <Image
+          src="/images/hero-bg.jpg"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', opacity: 0.14 }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, #0A0F0E 0%, rgba(10,15,14,0.7) 50%, #0A0F0E 100%)' }} />
         <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(61,122,116,0.18)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
         <div className="glow-orb" style={{ width: 300, height: 300, background: 'rgba(196,121,122,0.08)', top: '30%', right: '10%', animationDelay: '2s' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 560, margin: '0 auto' }}>
