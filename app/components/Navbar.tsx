@@ -113,39 +113,58 @@ export default function Navbar() {
 
             {servicesOpen && (
               <div
-                className="glass-strong"
                 onMouseEnter={openDropdown}
                 onMouseLeave={closeDropdown}
                 style={{
-                  position: 'absolute', top: 'calc(100% + 8px)', left: '50%',
+                  position: 'absolute', top: '100%', left: '50%',
                   transform: 'translateX(-50%)',
+                  marginTop: '8px',
+                  background: 'rgba(15, 20, 18, 0.97)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(61,122,116,0.25)',
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.6)',
+                  borderRadius: '12px',
                   padding: '8px 0',
                   minWidth: 220,
                   animation: 'fadeUp 0.15s ease both',
-                  zIndex: 200,
+                  zIndex: 9999,
                   overflow: 'hidden',
                 }}>
-                <div style={{ position: 'absolute', top: -4, left: '50%', transform: 'translateX(-50%)', width: 8, height: 8, background: 'rgba(255,255,255,0.06)', borderLeft: '1px solid rgba(255,255,255,0.1)', borderTop: '1px solid rgba(255,255,255,0.1)', rotate: '45deg' }} />
+                <div style={{ position: 'absolute', top: -4, left: '50%', transform: 'translateX(-50%)', width: 8, height: 8, background: 'rgba(15, 20, 18, 0.97)', borderLeft: '1px solid rgba(61,122,116,0.25)', borderTop: '1px solid rgba(61,122,116,0.25)', rotate: '45deg' }} />
                 {serviceLinks.map(link => (
                   <Link key={link.href} href={link.href} onClick={() => setServicesOpen(false)} style={{
-                    display: 'block', color: 'rgba(240,237,232,0.5)', textDecoration: 'none',
-                    padding: '10px 20px', fontSize: 14,
-                    fontFamily: 'DM Sans, sans-serif', fontWeight: 400,
+                    display: 'block', color: 'rgba(240,237,232,0.85)', textDecoration: 'none',
+                    padding: '12px 20px', fontSize: 15,
+                    fontFamily: 'DM Sans, sans-serif', fontWeight: 500,
                     transition: 'all 0.15s', borderRadius: 0,
+                    borderLeft: '2px solid transparent',
                   }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#C4797A'; (e.currentTarget as HTMLElement).style.background = 'rgba(196,121,122,0.08)'; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.5)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+                    onMouseEnter={e => {
+                      const el = e.currentTarget as HTMLElement;
+                      el.style.color = '#F0EDE8';
+                      el.style.background = 'rgba(255,255,255,0.05)';
+                      el.style.borderLeft = '2px solid #C4797A';
+                      el.style.paddingLeft = '14px';
+                    }}
+                    onMouseLeave={e => {
+                      const el = e.currentTarget as HTMLElement;
+                      el.style.color = 'rgba(240,237,232,0.85)';
+                      el.style.background = 'transparent';
+                      el.style.borderLeft = '2px solid transparent';
+                      el.style.paddingLeft = '20px';
+                    }}
                   >{link.label}</Link>
                 ))}
                 <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '6px 12px' }} />
                 <Link href="/services" onClick={() => setServicesOpen(false)} style={{
-                  display: 'block', color: 'rgba(240,237,232,0.35)', textDecoration: 'none',
+                  display: 'block', color: 'rgba(240,237,232,0.5)', textDecoration: 'none',
                   padding: '8px 20px', fontSize: 13,
                   fontFamily: 'DM Sans, sans-serif',
                   transition: 'color 0.15s',
                 }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.5)'}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.35)'}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.7)'}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.5)'}
                 >View all services →</Link>
               </div>
             )}
