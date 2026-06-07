@@ -139,6 +139,29 @@ export default function ContactPage() {
               <p style={{ color: '#C4797A', fontWeight: 600, fontSize: 14, marginBottom: 8, fontFamily: 'DM Sans, sans-serif' }}>Response Time</p>
               <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>WhatsApp & calls — within hours. Email — within 24 hours. We're here to help!</p>
             </div>
+
+            <div style={{
+              width: '100%',
+              borderRadius: 16,
+              overflow: 'hidden',
+              border: '1px solid rgba(196,121,122,0.2)',
+              marginTop: 24,
+              height: 280,
+            }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60896.78834900157!2d78.4351904!3d17.3850044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972ff1b11e4f%3A0x6ec7e1b5b7c9bcab!2sHyderabad%2C%20Telangana%20500035!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="280"
+                style={{ border: 0, filter: 'grayscale(80%) invert(90%) hue-rotate(180deg)' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="WolvesLogic Location"
+              />
+            </div>
+            <p style={{ color: '#555577', fontSize: 13, marginTop: 8, textAlign: 'center' }}>
+              📍 Hyderabad, Telangana, India — 500035
+            </p>
           </div>
 
           {/* ── Contact form ── */}

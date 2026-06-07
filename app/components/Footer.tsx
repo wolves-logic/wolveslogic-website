@@ -55,7 +55,7 @@ export default function Footer() {
             <h4 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11, fontWeight: 700, color: '#C4797A', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 18 }}>Contact</h4>
             <p style={{ color: '#4A6460', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif' }}>+91 9959691347</p>
             <p style={{ color: '#4A6460', fontSize: 14, marginBottom: 10, fontFamily: 'DM Sans, sans-serif' }}>wolveslogicit@gmail.com</p>
-            <p style={{ color: '#4A6460', fontSize: 14, fontFamily: 'DM Sans, sans-serif' }}>WhatsApp available</p>
+            <p style={{ color: '#4A6460', fontSize: 14, fontFamily: 'DM Sans, sans-serif' }}>📍 Hyderabad, Telangana, India — 500035</p>
           </div>
         </div>
 
