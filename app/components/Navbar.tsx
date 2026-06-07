@@ -73,7 +73,11 @@ export default function Navbar() {
             fontSize: 22,
             fontWeight: 700,
             color: '#F0EDE8',
-            lineHeight: '48px',
+            alignSelf: 'center',
+            lineHeight: 1,
+            paddingTop: 0,
+            paddingBottom: 0,
+            margin: 0,
             whiteSpace: 'nowrap',
           }}>
             Wolves<span style={{color:'#C4797A'}}>Logic</span>

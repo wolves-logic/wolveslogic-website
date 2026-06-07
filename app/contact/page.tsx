@@ -166,9 +166,7 @@ export default function ContactPage() {
           </div>
 
           {/* ── Contact form ── */}
-          <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.4)', borderRadius: 16, padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #C4797A, #3D7A74, transparent)' }} />
-
+          <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
             {sent ? (
               <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
                 <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'rgba(196,121,122,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
