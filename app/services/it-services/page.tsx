@@ -42,11 +42,11 @@ export default function ITServicesPage() {
     <>
       {/* ── HERO ── */}
       <section style={{ padding: '10rem 2.5rem 5rem', position: 'relative', overflow: 'hidden' }}>
-        <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(45,74,71,0.2)', top: -100, right: -100 }} />
+        <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(61,122,116,0.2)', top: -100, right: -100 }} />
         <div className="glow-orb" style={{ width: 280, height: 280, background: 'rgba(196,121,122,0.08)', bottom: 0, left: 0, animationDelay: '2.5s' }} />
 
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: '#7A9490', fontSize: 14, textDecoration: 'none', marginBottom: 28, fontFamily: 'DM Sans, sans-serif' }}>
+          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(240,237,232,0.5)', fontSize: 14, textDecoration: 'none', marginBottom: 28, fontFamily: 'DM Sans, sans-serif' }}>
             ← Back to Services
           </Link>
           <div className="fade-up-1">
@@ -55,9 +55,9 @@ export default function ITServicesPage() {
           </div>
           <h1 className="fade-up-2" style={{ fontSize: 'clamp(2.8rem,6vw,4.8rem)', fontWeight: 700, marginTop: 4, marginBottom: 24, maxWidth: 780, lineHeight: 1.1 }}>
             Technology That{' '}
-            <span style={{ color: '#3D6460', fontStyle: 'italic' }}>Scales With You</span>
+            <span style={{ color: '#3D7A74', fontStyle: 'italic' }}>Scales With You</span>
           </h1>
-          <p className="fade-up-3" style={{ color: '#7A9490', fontSize: 18, maxWidth: 620, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', marginBottom: 36 }}>
+          <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, maxWidth: 620, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', marginBottom: 36 }}>
             Comprehensive IT support and consulting for small and medium enterprises. We handle the technology so you can focus on growing your business.
           </p>
           <div className="fade-up-4" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
@@ -68,19 +68,19 @@ export default function ITServicesPage() {
       </section>
 
       {/* ── DESCRIPTION ── */}
-      <section style={{ padding: '4rem 2.5rem', background: '#0D1117' }}>
+      <section style={{ padding: '4rem 2.5rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '4rem', alignItems: 'start' }}>
           <div>
             <span className="section-label">About the Service</span>
             <div className="divider" />
             <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, marginTop: 4, marginBottom: 20 }}>What We Do</h2>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               For most small and medium businesses, maintaining a full in-house IT department is simply not practical. Yet technology underpins nearly every business function — from customer communication and data storage to operations and growth. WolvesLogic bridges this gap with flexible, expert IT support tailored to your size and sector.
             </p>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               We work as an extension of your team, not an external vendor. That means we take time to understand your business, your budget constraints, and your long-term plans before recommending any solution. Our approach is practical, not tech-for-tech's-sake.
             </p>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               Whether you need a one-off project — like migrating to the cloud — or ongoing monthly IT support, we offer flexible engagement models that grow with you.
             </p>
           </div>
@@ -92,8 +92,8 @@ export default function ITServicesPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {included.map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
-                  <CheckCircle size={15} color="#3D6460" style={{ flexShrink: 0, marginTop: 3 }} />
-                  <span style={{ color: '#7A9490', fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>{item}</span>
+                  <CheckCircle size={15} color="#3D7A74" style={{ flexShrink: 0, marginTop: 3 }} />
+                  <span style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -107,13 +107,13 @@ export default function ITServicesPage() {
           <span className="section-label">Who It's For</span>
           <div className="divider" />
           <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 700, marginTop: 4, marginBottom: 36 }}>
-            Built for <span style={{ color: '#3D6460', fontStyle: 'italic' }}>Growing Businesses</span>
+            Built for <span style={{ color: '#3D7A74', fontStyle: 'italic' }}>Growing Businesses</span>
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.25rem' }}>
             {audience.map(({ who, detail }) => (
-              <div key={who} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 12, padding: '1.5rem' }}>
-                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EEF0', marginBottom: 8 }}>{who}</h4>
-                <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>{detail}</p>
+              <div key={who} style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.4)', borderRadius: 12, padding: '1.5rem' }}>
+                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EDE8', marginBottom: 8 }}>{who}</h4>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>{detail}</p>
               </div>
             ))}
           </div>
@@ -121,19 +121,19 @@ export default function ITServicesPage() {
       </section>
 
       {/* ── PROCESS ── */}
-      <section style={{ padding: '5rem 2.5rem', background: '#0D1117' }}>
+      <section style={{ padding: '5rem 2.5rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <span className="section-label">How It Works</span>
           <div className="divider" />
           <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.6rem)', fontWeight: 700, marginTop: 4, marginBottom: 40 }}>
-            Our <span style={{ color: '#3D6460', fontStyle: 'italic' }}>Engagement Model</span>
+            Our <span style={{ color: '#3D7A74', fontStyle: 'italic' }}>Engagement Model</span>
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.5rem' }}>
             {steps.map(({ num, title, desc }) => (
-              <div key={num} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '2rem' }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 42, fontWeight: 800, color: 'rgba(61,100,96,0.2)', lineHeight: 1, marginBottom: 16 }}>{num}</div>
+              <div key={num} style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 12, padding: '2rem' }}>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 42, fontWeight: 800, color: 'rgba(61,122,116,0.2)', lineHeight: 1, marginBottom: 16 }}>{num}</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
-                <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -143,16 +143,16 @@ export default function ITServicesPage() {
       {/* ── PRICING ── */}
       <section style={{ padding: '4rem 2.5rem' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ background: '#161B22', border: '1px solid rgba(61,100,96,0.35)', borderRadius: 14, padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
+          <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 14, padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
               <span className="section-label">Pricing</span>
               <div className="divider" />
-              <h3 style={{ fontSize: 26, fontWeight: 700, marginTop: 4 }}>Custom Pricing <span style={{ color: '#3D6460' }}>for Every Business</span></h3>
-              <p style={{ color: '#7A9490', fontSize: 15, marginTop: 10, fontFamily: 'DM Sans, sans-serif', maxWidth: 500, lineHeight: 1.7 }}>
+              <h3 style={{ fontSize: 26, fontWeight: 700, marginTop: 4 }}>Custom Pricing <span style={{ color: '#3D7A74' }}>for Every Business</span></h3>
+              <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, marginTop: 10, fontFamily: 'DM Sans, sans-serif', maxWidth: 500, lineHeight: 1.7 }}>
                 Project-based quotes or monthly retainers from ₹5,000/month. We scope carefully to avoid overcharging for things you don't need.
               </p>
             </div>
-            <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: '13px 28px', background: '#3D6460' }}>
+            <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: '13px 28px', background: '#3D7A74' }}>
               Get a Quote <ArrowRight size={16} />
             </Link>
           </div>
@@ -160,16 +160,16 @@ export default function ITServicesPage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ padding: '4rem 2.5rem 6rem', background: '#0D1117' }}>
+      <section style={{ padding: '4rem 2.5rem 6rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <span className="section-label">FAQ</span>
           <div className="divider" />
-          <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, marginTop: 4, marginBottom: 36 }}>Common <span style={{ color: '#3D6460', fontStyle: 'italic' }}>Questions</span></h2>
+          <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, marginTop: 4, marginBottom: 36 }}>Common <span style={{ color: '#3D7A74', fontStyle: 'italic' }}>Questions</span></h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             {faqs.map(({ q, a }) => (
-              <div key={q} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '1.75rem' }}>
-                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EEF0', marginBottom: 10 }}>{q}</h4>
-                <p style={{ color: '#7A9490', fontSize: 15, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{a}</p>
+              <div key={q} style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 12, padding: '1.75rem' }}>
+                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EDE8', marginBottom: 10 }}>{q}</h4>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{a}</p>
               </div>
             ))}
           </div>
@@ -178,15 +178,15 @@ export default function ITServicesPage() {
 
       {/* ── CTA ── */}
       <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div className="glow-orb" style={{ width: 400, height: 400, background: 'rgba(45,74,71,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
+        <div className="glow-orb" style={{ width: 400, height: 400, background: 'rgba(61,122,116,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, marginBottom: 16 }}>
-            Let's Build Your <span style={{ color: '#3D6460', fontStyle: 'italic' }}>IT Foundation</span>
+            Let's Build Your <span style={{ color: '#3D7A74', fontStyle: 'italic' }}>IT Foundation</span>
           </h2>
-          <p style={{ color: '#7A9490', marginBottom: 36, fontSize: 16, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(240,237,232,0.5)', marginBottom: 36, fontSize: 16, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
             Start with a free 30-minute discovery call — no commitment required.
           </p>
-          <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: '13px 28px', background: '#2D4A47' }}>
+          <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: '13px 28px', background: '#3D7A74' }}>
             Book a Consultation <ArrowRight size={16} />
           </Link>
         </div>

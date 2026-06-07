@@ -57,7 +57,7 @@ export default function AboutPage() {
     <>
       {/* ── HERO ── */}
       <section style={{ padding: '10rem 2.5rem 5rem', position: 'relative', overflow: 'hidden' }}>
-        <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(45,74,71,0.18)', top: -100, right: -100 }} />
+        <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(61,122,116,0.18)', top: -100, right: -100 }} />
         <div className="glow-orb" style={{ width: 280, height: 280, background: 'rgba(196,121,122,0.09)', bottom: 0, left: 0, animationDelay: '3s' }} />
 
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -69,7 +69,7 @@ export default function AboutPage() {
             A decade of empowering people through{' '}
             <span style={{ color: '#C4797A', fontStyle: 'italic' }}>technology and education.</span>
           </h1>
-          <p className="fade-up-3" style={{ color: '#7A9490', fontSize: 18, maxWidth: 600, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, maxWidth: 600, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>
             WolvesLogic was not built overnight. It is the product of years of real-world experience, genuine care for people, and an unwavering belief that quality support should be accessible to everyone.
           </p>
         </div>
@@ -80,31 +80,31 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '4rem', alignItems: 'start' }}>
           <div>
             <div style={{ marginBottom: 28, position: 'relative', display: 'inline-block' }}>
-              <div style={{ width: 96, height: 96, borderRadius: '50%', background: 'linear-gradient(135deg,#2D4A47,#C4797A)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 34, fontFamily: 'Playfair Display, serif', fontWeight: 700, color: '#fff' }}>ML</div>
-              <div style={{ position: 'absolute', bottom: 4, right: -2, width: 18, height: 18, borderRadius: '50%', background: '#C4797A', border: '3px solid #0D1117' }} />
+              <div style={{ width: 96, height: 96, borderRadius: '50%', background: 'linear-gradient(135deg,#3D7A74,#C4797A)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 34, fontFamily: 'Playfair Display, serif', fontWeight: 700, color: '#fff' }}>ML</div>
+              <div style={{ position: 'absolute', bottom: 4, right: -2, width: 18, height: 18, borderRadius: '50%', background: '#C4797A', border: '3px solid #0A0F0E' }} />
             </div>
             <h2 style={{ fontSize: 28, fontWeight: 700, marginBottom: 6 }}>Mallachary Lingampet</h2>
             <p style={{ color: '#C4797A', fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 20, fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>Founder · WolvesLogic</p>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               WolvesLogic was founded by Mallachary Lingampet — a passionate IT professional and educator who saw a gap in accessible, high-quality support for students and professionals alike. Under Harviera IT Solutions LLP, WolvesLogic operates as a brand delivering real value through expertise, trust, and commitment.
             </p>
           </div>
 
           {/* Company card */}
-          <div style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 14, padding: '2rem', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #2D4A47, transparent)' }} />
+          <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.4)', borderRadius: 14, padding: '2rem', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #3D7A74, transparent)' }} />
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
               <span style={{ fontSize: 22 }}>🏢</span>
               <h3 style={{ fontSize: 18, fontWeight: 600, fontFamily: 'Playfair Display, serif' }}>Harviera IT Solutions LLP</h3>
             </div>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, fontSize: 15, fontFamily: 'DM Sans, sans-serif', marginBottom: 16 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, fontSize: 15, fontFamily: 'DM Sans, sans-serif', marginBottom: 16 }}>
               WolvesLogic operates as a brand under Harviera IT Solutions LLP — providing professional services with the trust and accountability of a structured, registered organisation.
             </p>
             <div style={{ display: 'flex', gap: '2rem', marginTop: 20 }}>
               {[['500+', 'Students'], ['50+', 'SME Clients'], ['200+', 'Professionals']].map(([val, lbl]) => (
                 <div key={lbl}>
                   <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 26, fontWeight: 700, color: '#C4797A', lineHeight: 1 }}>{val}</div>
-                  <div style={{ color: '#4A6460', fontSize: 12, marginTop: 5, fontFamily: 'DM Sans, sans-serif' }}>{lbl}</div>
+                  <div style={{ color: 'rgba(240,237,232,0.35)', fontSize: 12, marginTop: 5, fontFamily: 'DM Sans, sans-serif' }}>{lbl}</div>
                 </div>
               ))}
             </div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── TIMELINE ── */}
-      <section style={{ padding: '5rem 2.5rem 6rem', background: '#0D1117' }}>
+      <section style={{ padding: '5rem 2.5rem 6rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <div style={{ marginBottom: '3.5rem' }}>
             <span className="section-label">Our Journey</span>
@@ -139,8 +139,8 @@ export default function AboutPage() {
                   <div style={{ flexShrink: 0, width: 64, textAlign: 'right' }}>
                     <span style={{
                       display: 'inline-block',
-                      background: '#2D4A47',
-                      color: '#F0EEF0',
+                      background: '#3D7A74',
+                      color: '#F0EDE8',
                       fontSize: 12, fontWeight: 700,
                       fontFamily: 'DM Sans, sans-serif',
                       letterSpacing: '0.04em',
@@ -154,7 +154,7 @@ export default function AboutPage() {
                   <div style={{ flexShrink: 0, position: 'relative', display: 'flex', alignItems: 'flex-start', paddingTop: 4 }}>
                     <div style={{
                       width: 16, height: 16, borderRadius: '50%',
-                      background: i === timeline.length - 1 ? '#C4797A' : '#161B22',
+                      background: i === timeline.length - 1 ? '#C4797A' : 'rgba(255,255,255,0.06)',
                       border: `2px solid #C4797A`,
                       boxShadow: i === timeline.length - 1 ? '0 0 12px rgba(196,121,122,0.5)' : 'none',
                       flexShrink: 0,
@@ -164,17 +164,19 @@ export default function AboutPage() {
                   {/* Card */}
                   <div style={{
                     flex: 1,
-                    background: '#161B22',
-                    border: '1px solid rgba(45,74,71,0.35)',
+                    background: 'rgba(255,255,255,0.04)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(61,122,116,0.35)',
                     borderRadius: 12, padding: '1.5rem',
                     marginBottom: 4,
                     transition: 'border-color 0.3s',
                   }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(196,121,122,0.3)'}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(45,74,71,0.35)'}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(61,122,116,0.35)'}
                   >
                     <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
-                    <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>{body}</p>
+                    <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>{body}</p>
                   </div>
                 </div>
               ))}
@@ -197,9 +199,9 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: '1.5rem' }}>
             {values.map(({ title, desc }, i) => (
               <div key={title} className="card" style={{ position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 2, background: i % 2 === 0 ? 'linear-gradient(90deg,#C4797A,transparent)' : 'linear-gradient(90deg,#2D4A47,transparent)' }} />
-                <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: i % 2 === 0 ? '#C4797A' : '#3D6460', fontFamily: 'Playfair Display, serif' }}>{title}</h3>
-                <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 2, background: i % 2 === 0 ? 'linear-gradient(90deg,#C4797A,transparent)' : 'linear-gradient(90deg,#3D7A74,transparent)' }} />
+                <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 10, color: i % 2 === 0 ? '#C4797A' : '#3D7A74', fontFamily: 'Playfair Display, serif' }}>{title}</h3>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -207,13 +209,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', background: '#0D1117', position: 'relative', overflow: 'hidden' }}>
-        <div className="glow-orb" style={{ width: 400, height: 400, background: 'rgba(45,74,71,0.14)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
+      <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', background: '#0A0F0E', position: 'relative', overflow: 'hidden' }}>
+        <div className="glow-orb" style={{ width: 400, height: 400, background: 'rgba(61,122,116,0.14)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: 700, marginBottom: 16 }}>
             Ready to <span style={{ color: '#C4797A', fontStyle: 'italic' }}>Work With Us?</span>
           </h2>
-          <p style={{ color: '#7A9490', marginBottom: 32, fontFamily: 'DM Sans, sans-serif', fontSize: 16, lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(240,237,232,0.5)', marginBottom: 32, fontFamily: 'DM Sans, sans-serif', fontSize: 16, lineHeight: 1.7 }}>
             Let's talk about what we can build together.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: '13px 32px' }}>

@@ -29,16 +29,17 @@ export default function ContactPage() {
   const whatsappMsg = encodeURIComponent(`Hi WolvesLogic! I am interested in your services. My name is ${form.name || '[Your Name]'} and I need help with ${form.service || 'your services'}.`);
 
   const inputStyle: React.CSSProperties = {
-    width: '100%', background: '#0D1117', border: '1px solid rgba(45,74,71,0.4)',
-    borderRadius: 8, padding: '13px 16px', color: '#F0EEF0', fontSize: 15,
-    outline: 'none', transition: 'border-color 0.2s', fontFamily: 'DM Sans, sans-serif',
+    width: '100%', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)',
+    borderRadius: 8, padding: '13px 16px', color: '#F0EDE8', fontSize: 15,
+    outline: 'none', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)',
+    transition: 'border-color 0.2s', fontFamily: 'DM Sans, sans-serif',
   };
 
   return (
     <>
       {/* ── HERO ── */}
       <section style={{ padding: '10rem 2.5rem 4rem', position: 'relative', overflow: 'hidden' }}>
-        <div className="glow-orb" style={{ width: 450, height: 450, background: 'rgba(45,74,71,0.18)', top: -80, right: -80 }} />
+        <div className="glow-orb" style={{ width: 450, height: 450, background: 'rgba(61,122,116,0.18)', top: -80, right: -80 }} />
         <div className="glow-orb" style={{ width: 250, height: 250, background: 'rgba(196,121,122,0.1)', bottom: 0, left: 0, animationDelay: '2.5s' }} />
 
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -50,7 +51,7 @@ export default function ContactPage() {
             Let's Start a{' '}
             <span style={{ color: '#C4797A', fontStyle: 'italic' }}>Conversation</span>
           </h1>
-          <p className="fade-up-3" style={{ color: '#7A9490', fontSize: 18, maxWidth: 500, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, maxWidth: 500, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>
             Reach us via WhatsApp, phone, or email. We typically respond within a few hours.
           </p>
         </div>
@@ -77,7 +78,7 @@ export default function ContactPage() {
                 <MessageCircle size={22} color="#25D366" />
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EEF0', fontFamily: 'DM Sans, sans-serif' }}>Chat on WhatsApp</div>
+                <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EDE8', fontFamily: 'DM Sans, sans-serif' }}>Chat on WhatsApp</div>
                 <div style={{ color: '#25D366', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>Available · Usually responds fast</div>
               </div>
               <span style={{
@@ -90,23 +91,23 @@ export default function ContactPage() {
             {/* Phone */}
             <a href={`tel:${PHONE_NUMBER}`} style={{
               display: 'flex', alignItems: 'center', gap: 16,
-              background: 'rgba(61,100,96,0.08)', border: '1px solid rgba(45,74,71,0.3)',
+              background: 'rgba(61,122,116,0.08)', border: '1px solid rgba(61,122,116,0.3)',
               borderRadius: 12, padding: '1.25rem 1.5rem', marginBottom: 14, textDecoration: 'none',
               transition: 'all 0.25s',
             }}
-              onMouseEnter={e => { const el = e.currentTarget; el.style.background = 'rgba(61,100,96,0.14)'; el.style.transform = 'translateY(-2px)'; }}
-              onMouseLeave={e => { const el = e.currentTarget; el.style.background = 'rgba(61,100,96,0.08)'; el.style.transform = 'translateY(0)'; }}
+              onMouseEnter={e => { const el = e.currentTarget; el.style.background = 'rgba(61,122,116,0.14)'; el.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={e => { const el = e.currentTarget; el.style.background = 'rgba(61,122,116,0.08)'; el.style.transform = 'translateY(0)'; }}
             >
-              <div style={{ width: 46, height: 46, borderRadius: 10, background: 'rgba(45,74,71,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Phone size={22} color="#3D6460" />
+              <div style={{ width: 46, height: 46, borderRadius: 10, background: 'rgba(61,122,116,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Phone size={22} color="#3D7A74" />
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EEF0', fontFamily: 'DM Sans, sans-serif' }}>Call Us</div>
-                <div style={{ color: '#7A9490', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>{PHONE_NUMBER}</div>
+                <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EDE8', fontFamily: 'DM Sans, sans-serif' }}>Call Us</div>
+                <div style={{ color: 'rgba(240,237,232,0.5)', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>{PHONE_NUMBER}</div>
               </div>
               <span style={{
-                background: 'rgba(45,74,71,0.25)', border: '1px solid rgba(45,74,71,0.5)',
-                color: '#7A9490', fontSize: 12, fontWeight: 600, padding: '5px 12px',
+                background: 'rgba(61,122,116,0.25)', border: '1px solid rgba(61,122,116,0.5)',
+                color: 'rgba(240,237,232,0.5)', fontSize: 12, fontWeight: 600, padding: '5px 12px',
                 borderRadius: 100, fontFamily: 'DM Sans, sans-serif', whiteSpace: 'nowrap', flexShrink: 0,
               }}>9 AM – 9 PM IST</span>
             </a>
@@ -125,8 +126,8 @@ export default function ContactPage() {
                 <Mail size={22} color="#C4797A" />
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EEF0', fontFamily: 'DM Sans, sans-serif' }}>Email Us</div>
-                <div style={{ color: '#7A9490', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>{EMAIL}</div>
+                <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EDE8', fontFamily: 'DM Sans, sans-serif' }}>Email Us</div>
+                <div style={{ color: 'rgba(240,237,232,0.5)', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>{EMAIL}</div>
               </div>
               <span style={{
                 background: 'rgba(196,121,122,0.12)', border: '1px solid rgba(196,121,122,0.3)',
@@ -135,9 +136,9 @@ export default function ContactPage() {
               }}>~ within 24 hrs</span>
             </a>
 
-            <div style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 10, padding: '1.25rem 1.5rem' }}>
+            <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 10, padding: '1.25rem 1.5rem' }}>
               <p style={{ color: '#C4797A', fontWeight: 600, fontSize: 14, marginBottom: 8, fontFamily: 'DM Sans, sans-serif' }}>Response Time</p>
-              <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>WhatsApp & calls — within hours. Email — within 24 hours. We're here to help!</p>
+              <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>WhatsApp & calls — within hours. Email — within 24 hours. We're here to help!</p>
             </div>
 
             <div style={{
@@ -159,14 +160,14 @@ export default function ContactPage() {
                 title="WolvesLogic Location"
               />
             </div>
-            <p style={{ color: '#555577', fontSize: 13, marginTop: 8, textAlign: 'center' }}>
+            <p style={{ color: 'rgba(240,237,232,0.35)', fontSize: 13, marginTop: 8, textAlign: 'center' }}>
               📍 Hyderabad, Telangana, India — 500035
             </p>
           </div>
 
           {/* ── Contact form ── */}
-          <div style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.4)', borderRadius: 16, padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #C4797A, #2D4A47, transparent)' }} />
+          <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.4)', borderRadius: 16, padding: '2.5rem', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 3, background: 'linear-gradient(90deg, #C4797A, #3D7A74, transparent)' }} />
 
             {sent ? (
               <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
@@ -174,7 +175,7 @@ export default function ContactPage() {
                   <CheckCircle size={32} color="#C4797A" />
                 </div>
                 <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 12 }}>Message Sent!</h3>
-                <p style={{ color: '#7A9490', lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>Thank you for reaching out. We will get back to you within 24 hours.</p>
+                <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>Thank you for reaching out. We will get back to you within 24 hours.</p>
                 <button onClick={() => { setSent(false); setForm({ name: '', email: '', phone: '', service: '', message: '' }); }}
                   className="btn-primary" style={{ marginTop: 24, border: 'none', cursor: 'pointer' }}>
                   Send Another
@@ -190,34 +191,34 @@ export default function ContactPage() {
                     { id: 'phone', label: 'Phone / WhatsApp', type: 'tel', placeholder: '+91 XXXXXXXXXX' },
                   ].map(field => (
                     <div key={field.id}>
-                      <label style={{ display: 'block', fontSize: 13, color: '#7A9490', marginBottom: 8, fontWeight: 500, fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>{field.label}</label>
+                      <label style={{ display: 'block', fontSize: 13, color: 'rgba(240,237,232,0.5)', marginBottom: 8, fontWeight: 500, fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>{field.label}</label>
                       <input
                         type={field.type} placeholder={field.placeholder} required={field.label.includes('*')}
                         value={(form as any)[field.id]}
                         onChange={e => setForm(f => ({ ...f, [field.id]: e.target.value }))}
                         style={inputStyle}
                         onFocus={e => e.target.style.borderColor = 'rgba(196,121,122,0.5)'}
-                        onBlur={e => e.target.style.borderColor = 'rgba(45,74,71,0.4)'}
+                        onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
                       />
                     </div>
                   ))}
 
                   <div>
-                    <label style={{ display: 'block', fontSize: 13, color: '#7A9490', marginBottom: 8, fontWeight: 500, fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>Service Required</label>
+                    <label style={{ display: 'block', fontSize: 13, color: 'rgba(240,237,232,0.5)', marginBottom: 8, fontWeight: 500, fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>Service Required</label>
                     <select value={form.service} onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
-                      style={{ ...inputStyle, color: form.service ? '#F0EEF0' : '#4A6460' }}>
+                      style={{ ...inputStyle, color: form.service ? '#F0EDE8' : 'rgba(240,237,232,0.35)' }}>
                       <option value="">Select a service...</option>
                       {services.map(s => <option key={s} value={s}>{s}</option>)}
                     </select>
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: 13, color: '#7A9490', marginBottom: 8, fontWeight: 500, fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>Message *</label>
+                    <label style={{ display: 'block', fontSize: 13, color: 'rgba(240,237,232,0.5)', marginBottom: 8, fontWeight: 500, fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>Message *</label>
                     <textarea required placeholder="Tell us about your requirement..."
                       value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} rows={4}
                       style={{ ...inputStyle, resize: 'vertical' }}
                       onFocus={e => e.target.style.borderColor = 'rgba(196,121,122,0.5)'}
-                      onBlur={e => e.target.style.borderColor = 'rgba(45,74,71,0.4)'}
+                      onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
                     />
                   </div>
 

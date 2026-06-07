@@ -37,12 +37,11 @@ export default function FAQAccordion() {
       {faqs.map(({ q, a }, i) => {
         const isOpen = open === i;
         return (
-          <div key={q} style={{
-            background: '#161B22',
-            border: `1px solid ${isOpen ? 'rgba(196,121,122,0.35)' : 'rgba(45,74,71,0.4)'}`,
+          <div key={q} className="glass" style={{
+            borderLeft: isOpen ? '3px solid #3D7A74' : '3px solid transparent',
             borderRadius: 12,
             overflow: 'hidden',
-            transition: 'border-color 0.25s',
+            transition: 'border-color 0.25s, transform 0.3s, box-shadow 0.3s',
           }}>
             <button
               onClick={() => setOpen(isOpen ? null : i)}
@@ -52,14 +51,14 @@ export default function FAQAccordion() {
                 padding: '1.25rem 1.5rem', textAlign: 'left',
               }}
             >
-              <span style={{ color: '#F0EEF0', fontSize: 16, fontWeight: 600, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.5 }}>{q}</span>
+              <span style={{ color: '#F0EDE8', fontSize: 16, fontWeight: 600, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.5 }}>{q}</span>
               <span style={{
                 flexShrink: 0, width: 30, height: 30, borderRadius: '50%',
-                background: isOpen ? 'rgba(196,121,122,0.18)' : 'rgba(45,74,71,0.3)',
+                background: isOpen ? 'rgba(61,122,116,0.22)' : 'rgba(255,255,255,0.06)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 transition: 'all 0.25s',
               }}>
-                <Plus size={16} color={isOpen ? '#C4797A' : '#7A9490'} style={{ transition: 'transform 0.25s', transform: isOpen ? 'rotate(135deg)' : 'rotate(0deg)' }} />
+                <Plus size={16} color={isOpen ? '#5A9B94' : 'rgba(240,237,232,0.5)'} style={{ transition: 'transform 0.25s', transform: isOpen ? 'rotate(135deg)' : 'rotate(0deg)' }} />
               </span>
             </button>
             <div style={{
@@ -68,7 +67,7 @@ export default function FAQAccordion() {
               overflow: 'hidden',
               transition: 'max-height 0.35s ease, opacity 0.25s ease',
             }}>
-              <p style={{ color: '#7A9490', fontSize: 15, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', padding: '0 1.5rem 1.5rem' }}>{a}</p>
+              <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', padding: '0 1.5rem 1.5rem' }}>{a}</p>
             </div>
           </div>
         );

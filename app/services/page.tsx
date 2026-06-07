@@ -12,7 +12,7 @@ const services = [
     startingPrice: 'From ₹499 / task',
   },
   {
-    icon: Monitor, accent: '#3D6460', title: 'IT Services for SMEs', href: '/services/it-services',
+    icon: Monitor, accent: '#3D7A74', title: 'IT Services for SMEs', href: '/services/it-services',
     tagline: 'Technology that scales with your business.',
     desc: 'Comprehensive IT support and consulting for small and medium enterprises looking to grow smarter.',
     features: ['Cloud Setup & Migration', 'Web & App Development', 'IT Infrastructure', 'Cybersecurity Basics', 'Software Consulting', 'Technical Support'],
@@ -28,7 +28,7 @@ const services = [
     startingPrice: 'From ₹4,999 / month',
   },
   {
-    icon: Compass, accent: '#3D6460', title: 'Career Guidance', href: '/services/career-guidance',
+    icon: Compass, accent: '#3D7A74', title: 'Career Guidance', href: '/services/career-guidance',
     tagline: 'Navigate your IT career with clarity.',
     desc: 'Personalised mentoring to help you choose the right path, upskill, and land the job you deserve.',
     features: ['Career Roadmap Planning', 'Resume & LinkedIn Optimisation', 'Mock Interviews', 'Skill Gap Analysis', 'Domain Transition Guidance', 'Salary Negotiation Tips'],
@@ -50,7 +50,7 @@ export default function ServicesPage() {
     <>
       {/* ── HERO ── */}
       <section style={{ padding: '10rem 2.5rem 5rem', position: 'relative', overflow: 'hidden', textAlign: 'center' }}>
-        <div className="glow-orb" style={{ width: 550, height: 550, background: 'rgba(45,74,71,0.18)', top: -100, left: '50%', transform: 'translateX(-50%)' }} />
+        <div className="glow-orb" style={{ width: 550, height: 550, background: 'rgba(61,122,116,0.18)', top: -100, left: '50%', transform: 'translateX(-50%)' }} />
         <div className="glow-orb" style={{ width: 300, height: 300, background: 'rgba(196,121,122,0.08)', bottom: 0, right: '10%', animationDelay: '2s' }} />
 
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 680, margin: '0 auto' }}>
@@ -61,7 +61,7 @@ export default function ServicesPage() {
           <h1 className="fade-up-2" style={{ fontSize: 'clamp(2.8rem,6vw,4.8rem)', fontWeight: 700, marginTop: 4, marginBottom: 22, lineHeight: 1.1 }}>
             Our <span style={{ color: '#C4797A', fontStyle: 'italic' }}>Services</span>
           </h1>
-          <p className="fade-up-3" style={{ color: '#7A9490', fontSize: 18, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif' }}>
             Five focused service areas built to support students, professionals, and businesses at every stage of their journey.
           </p>
         </div>
@@ -72,8 +72,10 @@ export default function ServicesPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {services.map(({ icon: Icon, accent, title, tagline, desc, features, audience, href, startingPrice }, idx) => (
             <div key={title} style={{
-              background: '#161B22',
-              border: `1px solid ${idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(45,74,71,0.4)'}`,
+              background: 'rgba(255,255,255,0.04)',
+              backdropFilter: 'blur(20px) saturate(180%)',
+              WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+              border: `1px solid ${idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(61,122,116,0.4)'}`,
               borderRadius: 16, padding: '2.5rem',
               display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
               gap: '2.5rem', alignItems: 'start',
@@ -81,7 +83,7 @@ export default function ServicesPage() {
               transition: 'border-color 0.3s',
             }}
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = accent + '60'}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(45,74,71,0.4)'}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(61,122,116,0.4)'}
             >
               {/* Accent stripe */}
               <div style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: 3, background: `linear-gradient(180deg, ${accent}, transparent)` }} />
@@ -94,28 +96,28 @@ export default function ServicesPage() {
                   <span style={{ background: `${accent}15`, color: accent, fontSize: 11, padding: '4px 12px', borderRadius: 100, fontWeight: 700, letterSpacing: '0.1em', fontFamily: 'DM Sans, sans-serif', textTransform: 'uppercase' }}>0{idx + 1}</span>
                   {startingPrice && (
                     <span style={{
-                      background: 'rgba(45,74,71,0.22)', border: '1px solid rgba(45,74,71,0.5)',
-                      color: '#7A9490', fontSize: 12, padding: '4px 12px', borderRadius: 100,
+                      background: 'rgba(61,122,116,0.22)', border: '1px solid rgba(61,122,116,0.5)',
+                      color: 'rgba(240,237,232,0.5)', fontSize: 12, padding: '4px 12px', borderRadius: 100,
                       fontWeight: 600, fontFamily: 'DM Sans, sans-serif', whiteSpace: 'nowrap',
                     }}>{startingPrice}</span>
                   )}
                 </div>
                 <h2 style={{ fontSize: 26, fontWeight: 700, marginBottom: 8 }}>{title}</h2>
                 <p style={{ color: accent, fontSize: 14, fontWeight: 500, marginBottom: 14, fontFamily: 'DM Sans, sans-serif' }}>{tagline}</p>
-                <p style={{ color: '#7A9490', lineHeight: 1.85, fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
+                <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
                 <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: '#4A6460', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}>For:</span>
-                  <span style={{ color: '#F0EEF0', fontSize: 13, fontWeight: 500, fontFamily: 'DM Sans, sans-serif' }}>{audience}</span>
+                  <span style={{ color: 'rgba(240,237,232,0.35)', fontSize: 13, fontFamily: 'DM Sans, sans-serif' }}>For:</span>
+                  <span style={{ color: '#F0EDE8', fontSize: 13, fontWeight: 500, fontFamily: 'DM Sans, sans-serif' }}>{audience}</span>
                 </div>
               </div>
 
               <div>
-                <h4 style={{ fontSize: 11, color: '#4A6460', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: 18, fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>What's Included</h4>
+                <h4 style={{ fontSize: 11, color: 'rgba(240,237,232,0.35)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: 18, fontFamily: 'DM Sans, sans-serif', fontWeight: 700 }}>What's Included</h4>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 16px' }}>
                   {features.map(f => (
                     <div key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
                       <CheckCircle size={13} color={accent} style={{ marginTop: 3, flexShrink: 0 }} />
-                      <span style={{ color: '#7A9490', fontSize: 14, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.5 }}>{f}</span>
+                      <span style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.5 }}>{f}</span>
                     </div>
                   ))}
                 </div>
@@ -148,13 +150,13 @@ export default function ServicesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', background: '#0D1117', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: '5rem 2.5rem 6rem', textAlign: 'center', background: '#0A0F0E', position: 'relative', overflow: 'hidden' }}>
         <div className="glow-orb" style={{ width: 400, height: 400, background: 'rgba(196,121,122,0.08)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 520, margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', fontWeight: 700, marginBottom: 14 }}>
             Not Sure Which <span style={{ color: '#C4797A', fontStyle: 'italic' }}>Service Fits?</span>
           </h2>
-          <p style={{ color: '#7A9490', marginBottom: 32, fontSize: 17, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(240,237,232,0.5)', marginBottom: 32, fontSize: 17, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
             Talk to us — we will guide you to the right solution at no cost.
           </p>
           <Link href="/contact" className="btn-primary" style={{ fontSize: 15, padding: '13px 32px' }}>

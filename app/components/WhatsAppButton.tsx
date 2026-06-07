@@ -25,7 +25,7 @@ export default function WhatsAppButton() {
         alignItems: 'center',
         gap: 10,
         background: '#25D366',
-        color: '#0D1117',
+        color: '#0A0F0E',
         textDecoration: 'none',
         borderRadius: 100,
         padding: hovered ? '14px 22px 14px 14px' : 14,
@@ -39,11 +39,11 @@ export default function WhatsAppButton() {
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         flexShrink: 0,
       }}>
-        <MessageCircle size={26} color="#0D1117" />
+        <MessageCircle size={26} color="#0A0F0E" />
         <span style={{
           position: 'absolute', top: -10, right: -10,
           width: 11, height: 11, borderRadius: '50%',
-          background: '#C4797A', border: '2px solid #0D1117',
+          background: '#C4797A', border: '2px solid #0A0F0E',
           display: hovered ? 'none' : 'block',
         }} />
       </span>

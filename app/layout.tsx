@@ -29,6 +29,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <div className="orb" style={{ width: 500, height: 500, background: 'rgba(61,122,116,0.12)', top: '-100px', left: '-100px', animationDelay: '0s' }} />
+        <div className="orb" style={{ width: 400, height: 400, background: 'rgba(196,121,122,0.08)', bottom: '-50px', right: '-50px', animationDelay: '4s' }} />
+        <div className="orb" style={{ width: 300, height: 300, background: 'rgba(61,122,116,0.08)', top: '50%', right: '20%', animationDelay: '8s' }} />
         <Navbar />
         <main>{children}</main>
         <Footer />

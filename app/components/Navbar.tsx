@@ -40,12 +40,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav style={{
+    <nav className={scrolled ? 'glass-navbar' : ''} style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
       padding: '0 2.5rem',
-      background: scrolled ? '#0D1117' : 'transparent',
-      backdropFilter: scrolled ? 'blur(24px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(45,74,71,0.4)' : '1px solid transparent',
+      background: scrolled ? undefined : 'transparent',
+      borderBottom: scrolled ? undefined : '1px solid transparent',
       transition: 'all 0.4s ease',
     }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 76 }}>
@@ -73,7 +72,7 @@ export default function Navbar() {
             fontFamily: 'Playfair Display, serif',
             fontSize: 22,
             fontWeight: 700,
-            color: '#F0EEF0',
+            color: '#F0EDE8',
             lineHeight: '48px',
             whiteSpace: 'nowrap',
           }}>
@@ -85,13 +84,13 @@ export default function Navbar() {
         <div style={{ display: 'flex', gap: 4, alignItems: 'center' }} className="desktop-nav">
           {navLinks.slice(0, 2).map(link => (
             <Link key={link.href} href={link.href} style={{
-              color: '#7A9490', textDecoration: 'none', padding: '8px 20px',
+              color: 'rgba(240,237,232,0.5)', textDecoration: 'none', padding: '8px 20px',
               borderRadius: 6, fontSize: 15, fontWeight: 400,
               fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em',
               transition: 'all 0.2s',
             }}
-              onMouseEnter={e => { (e.target as HTMLElement).style.color = '#F0EEF0'; (e.target as HTMLElement).style.background = 'rgba(45,74,71,0.25)'; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.color = '#7A9490'; (e.target as HTMLElement).style.background = 'transparent'; }}
+              onMouseEnter={e => { (e.target as HTMLElement).style.color = '#F0EDE8'; (e.target as HTMLElement).style.background = 'rgba(255,255,255,0.06)'; }}
+              onMouseLeave={e => { (e.target as HTMLElement).style.color = 'rgba(240,237,232,0.5)'; (e.target as HTMLElement).style.background = 'transparent'; }}
             >{link.label}</Link>
           ))}
 
@@ -104,13 +103,13 @@ export default function Navbar() {
           >
             <button style={{
               display: 'flex', alignItems: 'center', gap: 5,
-              color: '#7A9490', background: 'none', border: 'none',
+              color: 'rgba(240,237,232,0.5)', background: 'none', border: 'none',
               padding: '8px 20px', borderRadius: 6, fontSize: 15, fontWeight: 400,
               fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em',
               cursor: 'pointer', transition: 'all 0.2s',
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#F0EEF0'; (e.currentTarget as HTMLElement).style.background = 'rgba(45,74,71,0.25)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#7A9490'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#F0EDE8'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.06)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.5)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
             >
               Services
               <ChevronDown size={14} style={{ transition: 'transform 0.2s', transform: servicesOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} />
@@ -118,40 +117,39 @@ export default function Navbar() {
 
             {servicesOpen && (
               <div
+                className="glass-strong"
                 onMouseEnter={openDropdown}
                 onMouseLeave={closeDropdown}
                 style={{
                   position: 'absolute', top: 'calc(100% + 8px)', left: '50%',
                   transform: 'translateX(-50%)',
-                  background: '#161B22',
-                  border: '1px solid rgba(196,121,122,0.2)',
-                  borderRadius: 10, padding: '8px 0',
+                  padding: '8px 0',
                   minWidth: 220,
-                  boxShadow: '0 16px 48px rgba(0,0,0,0.4)',
                   animation: 'fadeUp 0.15s ease both',
                   zIndex: 200,
+                  overflow: 'hidden',
                 }}>
-                <div style={{ position: 'absolute', top: -4, left: '50%', transform: 'translateX(-50%)', width: 8, height: 8, background: '#161B22', borderLeft: '1px solid rgba(196,121,122,0.2)', borderTop: '1px solid rgba(196,121,122,0.2)', rotate: '45deg' }} />
+                <div style={{ position: 'absolute', top: -4, left: '50%', transform: 'translateX(-50%)', width: 8, height: 8, background: 'rgba(255,255,255,0.06)', borderLeft: '1px solid rgba(255,255,255,0.1)', borderTop: '1px solid rgba(255,255,255,0.1)', rotate: '45deg' }} />
                 {serviceLinks.map(link => (
                   <Link key={link.href} href={link.href} onClick={() => setServicesOpen(false)} style={{
-                    display: 'block', color: '#7A9490', textDecoration: 'none',
+                    display: 'block', color: 'rgba(240,237,232,0.5)', textDecoration: 'none',
                     padding: '10px 20px', fontSize: 14,
                     fontFamily: 'DM Sans, sans-serif', fontWeight: 400,
                     transition: 'all 0.15s', borderRadius: 0,
                   }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#C4797A'; (e.currentTarget as HTMLElement).style.background = 'rgba(196,121,122,0.08)'; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#7A9490'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.5)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
                   >{link.label}</Link>
                 ))}
-                <div style={{ height: 1, background: 'rgba(45,74,71,0.3)', margin: '6px 12px' }} />
+                <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', margin: '6px 12px' }} />
                 <Link href="/services" onClick={() => setServicesOpen(false)} style={{
-                  display: 'block', color: '#4A6460', textDecoration: 'none',
+                  display: 'block', color: 'rgba(240,237,232,0.35)', textDecoration: 'none',
                   padding: '8px 20px', fontSize: 13,
                   fontFamily: 'DM Sans, sans-serif',
                   transition: 'color 0.15s',
                 }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#7A9490'}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = '#4A6460'}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.5)'}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.35)'}
                 >View all services →</Link>
               </div>
             )}
@@ -159,46 +157,40 @@ export default function Navbar() {
 
           {/* Contact link */}
           <Link href="/contact" style={{
-            color: '#7A9490', textDecoration: 'none', padding: '8px 20px',
+            color: 'rgba(240,237,232,0.5)', textDecoration: 'none', padding: '8px 20px',
             borderRadius: 6, fontSize: 15, fontWeight: 400,
             fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em',
             transition: 'all 0.2s',
           }}
-            onMouseEnter={e => { (e.target as HTMLElement).style.color = '#F0EEF0'; (e.target as HTMLElement).style.background = 'rgba(45,74,71,0.25)'; }}
-            onMouseLeave={e => { (e.target as HTMLElement).style.color = '#7A9490'; (e.target as HTMLElement).style.background = 'transparent'; }}
+            onMouseEnter={e => { (e.target as HTMLElement).style.color = '#F0EDE8'; (e.target as HTMLElement).style.background = 'rgba(255,255,255,0.06)'; }}
+            onMouseLeave={e => { (e.target as HTMLElement).style.color = 'rgba(240,237,232,0.5)'; (e.target as HTMLElement).style.background = 'transparent'; }}
           >Contact</Link>
 
-          <Link href="/contact" style={{
-            background: '#C4797A', color: '#fff', textDecoration: 'none',
-            padding: '9px 22px', borderRadius: 6, fontSize: 14, fontWeight: 600,
-            fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.04em',
-            marginLeft: 12, transition: 'background 0.2s',
-          }}
-            onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = '#D4908F'}
-            onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = '#C4797A'}
-          >Get Started</Link>
+          <Link href="/contact" className="btn-glass-solid" style={{
+            padding: '9px 22px', borderRadius: 6, fontSize: 14,
+            letterSpacing: '0.04em', marginLeft: 12, boxShadow: 'none',
+          }}>Get Started</Link>
         </div>
 
         {/* Mobile menu button */}
-        <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: '#7A9490', cursor: 'pointer', display: 'none', padding: 4 }} className="mobile-menu-btn">
+        <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'rgba(240,237,232,0.5)', cursor: 'pointer', display: 'none', padding: 4 }} className="mobile-menu-btn">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile nav */}
       {open && (
-        <div style={{
-          background: '#0D1117', borderTop: '1px solid rgba(45,74,71,0.3)',
+        <div className="glass-navbar" style={{
           padding: '1rem 2.5rem 2rem',
         }}>
-          <Link href="/" onClick={() => setOpen(false)} style={{ display: 'block', color: '#7A9490', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(45,74,71,0.15)' }}>Home</Link>
-          <Link href="/about" onClick={() => setOpen(false)} style={{ display: 'block', color: '#7A9490', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(45,74,71,0.15)' }}>About</Link>
+          <Link href="/" onClick={() => setOpen(false)} style={{ display: 'block', color: 'rgba(240,237,232,0.5)', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>Home</Link>
+          <Link href="/about" onClick={() => setOpen(false)} style={{ display: 'block', color: 'rgba(240,237,232,0.5)', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>About</Link>
 
           {/* Mobile services accordion */}
-          <div style={{ borderBottom: '1px solid rgba(45,74,71,0.15)' }}>
+          <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
             <button onClick={() => setMobileServicesOpen(!mobileServicesOpen)} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%',
-              color: '#7A9490', background: 'none', border: 'none',
+              color: 'rgba(240,237,232,0.5)', background: 'none', border: 'none',
               padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', cursor: 'pointer',
             }}>
               Services
@@ -208,24 +200,22 @@ export default function Navbar() {
               <div style={{ paddingBottom: 8 }}>
                 {serviceLinks.map(link => (
                   <Link key={link.href} href={link.href} onClick={() => setOpen(false)} style={{
-                    display: 'block', color: '#4A6460', textDecoration: 'none',
+                    display: 'block', color: 'rgba(240,237,232,0.35)', textDecoration: 'none',
                     padding: '9px 0 9px 16px', fontSize: 15, fontFamily: 'DM Sans, sans-serif',
                     transition: 'color 0.15s',
                   }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#C4797A'}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = '#4A6460'}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = 'rgba(240,237,232,0.35)'}
                   >→ {link.label}</Link>
                 ))}
               </div>
             )}
           </div>
 
-          <Link href="/contact" onClick={() => setOpen(false)} style={{ display: 'block', color: '#7A9490', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(45,74,71,0.15)' }}>Contact</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} style={{
-            display: 'block', marginTop: 20, background: '#C4797A',
-            color: '#fff', textDecoration: 'none', padding: '13px 22px',
-            borderRadius: 6, fontSize: 15, fontWeight: 600, textAlign: 'center',
-            fontFamily: 'DM Sans, sans-serif',
+          <Link href="/contact" onClick={() => setOpen(false)} style={{ display: 'block', color: 'rgba(240,237,232,0.5)', textDecoration: 'none', padding: '14px 0', fontSize: 16, fontFamily: 'DM Sans, sans-serif', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>Contact</Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="btn-glass-solid" style={{
+            display: 'flex', marginTop: 20, padding: '13px 22px',
+            borderRadius: 6, fontSize: 15, justifyContent: 'center', boxShadow: 'none',
           }}>Get Started</Link>
         </div>
       )}

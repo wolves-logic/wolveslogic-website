@@ -43,10 +43,10 @@ export default function AssignmentHelpPage() {
       {/* ── HERO ── */}
       <section style={{ padding: '10rem 2.5rem 5rem', position: 'relative', overflow: 'hidden' }}>
         <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(196,121,122,0.14)', top: -100, right: -100 }} />
-        <div className="glow-orb" style={{ width: 300, height: 300, background: 'rgba(45,74,71,0.1)', bottom: 0, left: 0, animationDelay: '3s' }} />
+        <div className="glow-orb" style={{ width: 300, height: 300, background: 'rgba(61,122,116,0.1)', bottom: 0, left: 0, animationDelay: '3s' }} />
 
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: '#7A9490', fontSize: 14, textDecoration: 'none', marginBottom: 28, fontFamily: 'DM Sans, sans-serif' }}>
+          <Link href="/services" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, color: 'rgba(240,237,232,0.5)', fontSize: 14, textDecoration: 'none', marginBottom: 28, fontFamily: 'DM Sans, sans-serif' }}>
             ← Back to Services
           </Link>
           <div className="fade-up-1">
@@ -57,7 +57,7 @@ export default function AssignmentHelpPage() {
             Academic Excellence,{' '}
             <span style={{ color: '#C4797A', fontStyle: 'italic' }}>Delivered on Time</span>
           </h1>
-          <p className="fade-up-3" style={{ color: '#7A9490', fontSize: 18, maxWidth: 620, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', marginBottom: 36 }}>
+          <p className="fade-up-3" style={{ color: 'rgba(240,237,232,0.5)', fontSize: 18, maxWidth: 620, lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', marginBottom: 36 }}>
             Expert academic support for students at every level — from first-year essays to doctoral dissertations. We combine subject knowledge with a genuine commitment to your success.
           </p>
           <div className="fade-up-4" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
@@ -107,19 +107,19 @@ export default function AssignmentHelpPage() {
       </section>
 
       {/* ── DESCRIPTION ── */}
-      <section style={{ padding: '1rem 2.5rem 4rem', background: '#0D1117' }}>
+      <section style={{ padding: '1rem 2.5rem 4rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '4rem', alignItems: 'start' }}>
           <div>
             <span className="section-label">About the Service</span>
             <div className="divider" />
             <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, marginTop: 4, marginBottom: 20 }}>What We Do</h2>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               Academic pressure is real — tight deadlines, complex topics, and the constant need to perform at a high level. WolvesLogic's Assignment Help service is built to take that pressure off, pairing you with experts who understand your subject deeply.
             </p>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, marginBottom: 16, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               Whether you're navigating a challenging dissertation topic, struggling with programming logic, or simply short on time, our team delivers work that meets your institution's standards — on time, every time. We don't just write; we explain, support, and help you understand the material.
             </p>
-            <p style={{ color: '#7A9490', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
+            <p style={{ color: 'rgba(240,237,232,0.5)', lineHeight: 1.85, fontFamily: 'DM Sans, sans-serif', fontSize: 15 }}>
               Every submission is 100% original, fully referenced, and crafted to your specific brief. We treat your academic integrity with the same seriousness you do.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function AssignmentHelpPage() {
               {included.map(item => (
                 <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                   <CheckCircle size={15} color="#C4797A" style={{ flexShrink: 0 }} />
-                  <span style={{ color: '#7A9490', fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>{item}</span>
+                  <span style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, fontFamily: 'DM Sans, sans-serif' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -151,9 +151,9 @@ export default function AssignmentHelpPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.25rem' }}>
             {audience.map(({ who, detail }) => (
-              <div key={who} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '1.5rem' }}>
-                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EEF0', marginBottom: 8 }}>{who}</h4>
-                <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>{detail}</p>
+              <div key={who} style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 12, padding: '1.5rem' }}>
+                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EDE8', marginBottom: 8 }}>{who}</h4>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.7, fontFamily: 'DM Sans, sans-serif' }}>{detail}</p>
               </div>
             ))}
           </div>
@@ -161,7 +161,7 @@ export default function AssignmentHelpPage() {
       </section>
 
       {/* ── PROCESS ── */}
-      <section style={{ padding: '5rem 2.5rem', background: '#0D1117' }}>
+      <section style={{ padding: '5rem 2.5rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <span className="section-label">How It Works</span>
           <div className="divider" />
@@ -170,10 +170,10 @@ export default function AssignmentHelpPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.5rem' }}>
             {steps.map(({ num, title, desc }) => (
-              <div key={num} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '2rem', position: 'relative' }}>
+              <div key={num} style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 12, padding: '2rem', position: 'relative' }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 42, fontWeight: 800, color: 'rgba(196,121,122,0.15)', lineHeight: 1, marginBottom: 16 }}>{num}</div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
-                <p style={{ color: '#7A9490', fontSize: 14, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 14, lineHeight: 1.75, fontFamily: 'DM Sans, sans-serif' }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -183,12 +183,12 @@ export default function AssignmentHelpPage() {
       {/* ── PRICING ── */}
       <section style={{ padding: '4rem 2.5rem' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ background: '#161B22', border: '1px solid rgba(196,121,122,0.25)', borderRadius: 14, padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
+          <div style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(196,121,122,0.25)', borderRadius: 14, padding: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
               <span className="section-label">Pricing</span>
               <div className="divider" />
               <h3 style={{ fontSize: 26, fontWeight: 700, marginTop: 4 }}>Starting from <span style={{ color: '#C4797A' }}>₹500</span></h3>
-              <p style={{ color: '#7A9490', fontSize: 15, marginTop: 10, fontFamily: 'DM Sans, sans-serif', maxWidth: 500, lineHeight: 1.7 }}>
+              <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, marginTop: 10, fontFamily: 'DM Sans, sans-serif', maxWidth: 500, lineHeight: 1.7 }}>
                 Pricing depends on subject complexity, academic level, and deadline. Get a personalised quote — no strings attached.
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function AssignmentHelpPage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ padding: '4rem 2.5rem 6rem', background: '#0D1117' }}>
+      <section style={{ padding: '4rem 2.5rem 6rem', background: '#0A0F0E' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <span className="section-label">FAQ</span>
           <div className="divider" />
@@ -209,9 +209,9 @@ export default function AssignmentHelpPage() {
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             {faqs.map(({ q, a }) => (
-              <div key={q} style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 12, padding: '1.75rem' }}>
-                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EEF0', marginBottom: 10 }}>{q}</h4>
-                <p style={{ color: '#7A9490', fontSize: 15, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{a}</p>
+              <div key={q} style={{ background: 'rgba(255,255,255,0.04)', backdropFilter: 'blur(20px) saturate(180%)', WebkitBackdropFilter: 'blur(20px) saturate(180%)', border: '1px solid rgba(61,122,116,0.35)', borderRadius: 12, padding: '1.75rem' }}>
+                <h4 style={{ fontSize: 16, fontWeight: 600, color: '#F0EDE8', marginBottom: 10 }}>{q}</h4>
+                <p style={{ color: 'rgba(240,237,232,0.5)', fontSize: 15, lineHeight: 1.8, fontFamily: 'DM Sans, sans-serif' }}>{a}</p>
               </div>
             ))}
           </div>
@@ -225,7 +225,7 @@ export default function AssignmentHelpPage() {
           <h2 style={{ fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: 700, marginBottom: 16, lineHeight: 1.2 }}>
             Ready to <span style={{ color: '#C4797A', fontStyle: 'italic' }}>Ace Your Assignment?</span>
           </h2>
-          <p style={{ color: '#7A9490', marginBottom: 36, fontSize: 16, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
+          <p style={{ color: 'rgba(240,237,232,0.5)', marginBottom: 36, fontSize: 16, fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
             Share your brief today — we'll take it from there.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
