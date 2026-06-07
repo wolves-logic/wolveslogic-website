@@ -9,6 +9,7 @@ const services = [
     desc: 'We support students across undergraduate, postgraduate, and doctoral levels with high-quality academic work.',
     features: ['Essays & Reports', 'Dissertations & Theses', 'Coding Assignments', 'Case Studies', 'Research Papers', 'Presentations'],
     audience: 'Students at any level',
+    startingPrice: 'From ₹499 / task',
   },
   {
     icon: Monitor, accent: '#3D6460', title: 'IT Services for SMEs', href: '/services/it-services',
@@ -16,6 +17,7 @@ const services = [
     desc: 'Comprehensive IT support and consulting for small and medium enterprises looking to grow smarter.',
     features: ['Cloud Setup & Migration', 'Web & App Development', 'IT Infrastructure', 'Cybersecurity Basics', 'Software Consulting', 'Technical Support'],
     audience: 'Small & medium businesses',
+    startingPrice: 'Custom quote',
   },
   {
     icon: Briefcase, accent: '#C4797A', title: 'Job Support', href: '/services/job-support',
@@ -23,6 +25,7 @@ const services = [
     desc: 'Real-time job support for IT professionals — from daily tasks to critical deliveries, we are right there with you.',
     features: ['Production Issue Resolution', 'Sprint Support', 'Code Review & Debugging', 'Interview Preparation', 'Client Deliverable Support', 'After-hours Availability'],
     audience: 'Working IT professionals',
+    startingPrice: 'From ₹4,999 / month',
   },
   {
     icon: Compass, accent: '#3D6460', title: 'Career Guidance', href: '/services/career-guidance',
@@ -30,6 +33,7 @@ const services = [
     desc: 'Personalised mentoring to help you choose the right path, upskill, and land the job you deserve.',
     features: ['Career Roadmap Planning', 'Resume & LinkedIn Optimisation', 'Mock Interviews', 'Skill Gap Analysis', 'Domain Transition Guidance', 'Salary Negotiation Tips'],
     audience: 'Freshers & experienced professionals',
+    startingPrice: 'From ₹999 / session',
   },
   {
     icon: GraduationCap, accent: '#C4797A', title: 'Online Tutoring', href: '/services/online-tutoring',
@@ -37,6 +41,7 @@ const services = [
     desc: 'Live, personalised tutoring sessions for corporate employees and individuals who want to upskill fast.',
     features: ['1:1 Live Sessions', 'Batch Corporate Training', 'Custom Curriculum', 'Practical Hands-on Labs', 'Post-session Notes', 'Progress Tracking'],
     audience: 'Corporate teams & individuals',
+    startingPrice: 'From ₹1,499 / session',
   },
 ];
 
@@ -65,7 +70,7 @@ export default function ServicesPage() {
       {/* ── SERVICE CARDS ── */}
       <section style={{ padding: '2rem 2.5rem 6rem' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          {services.map(({ icon: Icon, accent, title, tagline, desc, features, audience, href }, idx) => (
+          {services.map(({ icon: Icon, accent, title, tagline, desc, features, audience, href, startingPrice }, idx) => (
             <div key={title} style={{
               background: '#161B22',
               border: `1px solid ${idx % 2 === 0 ? 'rgba(196,121,122,0.2)' : 'rgba(45,74,71,0.4)'}`,
@@ -87,6 +92,13 @@ export default function ServicesPage() {
                     <Icon size={26} color={accent} />
                   </div>
                   <span style={{ background: `${accent}15`, color: accent, fontSize: 11, padding: '4px 12px', borderRadius: 100, fontWeight: 700, letterSpacing: '0.1em', fontFamily: 'DM Sans, sans-serif', textTransform: 'uppercase' }}>0{idx + 1}</span>
+                  {startingPrice && (
+                    <span style={{
+                      background: 'rgba(45,74,71,0.22)', border: '1px solid rgba(45,74,71,0.5)',
+                      color: '#7A9490', fontSize: 12, padding: '4px 12px', borderRadius: 100,
+                      fontWeight: 600, fontFamily: 'DM Sans, sans-serif', whiteSpace: 'nowrap',
+                    }}>{startingPrice}</span>
+                  )}
                 </div>
                 <h2 style={{ fontSize: 26, fontWeight: 700, marginBottom: 8 }}>{title}</h2>
                 <p style={{ color: accent, fontSize: 14, fontWeight: 500, marginBottom: 14, fontFamily: 'DM Sans, sans-serif' }}>{tagline}</p>

@@ -69,6 +69,17 @@ h1, h2, h3, h4, h5 {
   pointer-events: none;
 }
 
+.dot-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(122, 148, 144, 0.16) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 75%);
+}
+
 .accent-text {
   color: var(--accent);
 }

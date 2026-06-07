@@ -76,10 +76,15 @@ export default function ContactPage() {
               <div style={{ width: 46, height: 46, borderRadius: 10, background: 'rgba(37,211,102,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <MessageCircle size={22} color="#25D366" />
               </div>
-              <div>
+              <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EEF0', fontFamily: 'DM Sans, sans-serif' }}>Chat on WhatsApp</div>
                 <div style={{ color: '#25D366', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>Available · Usually responds fast</div>
               </div>
+              <span style={{
+                background: 'rgba(37,211,102,0.12)', border: '1px solid rgba(37,211,102,0.3)',
+                color: '#25D366', fontSize: 12, fontWeight: 600, padding: '5px 12px',
+                borderRadius: 100, fontFamily: 'DM Sans, sans-serif', whiteSpace: 'nowrap', flexShrink: 0,
+              }}>~ 15–30 min</span>
             </a>
 
             {/* Phone */}
@@ -95,10 +100,15 @@ export default function ContactPage() {
               <div style={{ width: 46, height: 46, borderRadius: 10, background: 'rgba(45,74,71,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <Phone size={22} color="#3D6460" />
               </div>
-              <div>
+              <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EEF0', fontFamily: 'DM Sans, sans-serif' }}>Call Us</div>
                 <div style={{ color: '#7A9490', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>{PHONE_NUMBER}</div>
               </div>
+              <span style={{
+                background: 'rgba(45,74,71,0.25)', border: '1px solid rgba(45,74,71,0.5)',
+                color: '#7A9490', fontSize: 12, fontWeight: 600, padding: '5px 12px',
+                borderRadius: 100, fontFamily: 'DM Sans, sans-serif', whiteSpace: 'nowrap', flexShrink: 0,
+              }}>9 AM – 9 PM IST</span>
             </a>
 
             {/* Email */}
@@ -114,10 +124,15 @@ export default function ContactPage() {
               <div style={{ width: 46, height: 46, borderRadius: 10, background: 'rgba(196,121,122,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <Mail size={22} color="#C4797A" />
               </div>
-              <div>
+              <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 600, fontSize: 16, color: '#F0EEF0', fontFamily: 'DM Sans, sans-serif' }}>Email Us</div>
                 <div style={{ color: '#7A9490', fontSize: 13, marginTop: 3, fontFamily: 'DM Sans, sans-serif' }}>{EMAIL}</div>
               </div>
+              <span style={{
+                background: 'rgba(196,121,122,0.12)', border: '1px solid rgba(196,121,122,0.3)',
+                color: '#C4797A', fontSize: 12, fontWeight: 600, padding: '5px 12px',
+                borderRadius: 100, fontFamily: 'DM Sans, sans-serif', whiteSpace: 'nowrap', flexShrink: 0,
+              }}>~ within 24 hrs</span>
             </a>
 
             <div style={{ background: '#161B22', border: '1px solid rgba(45,74,71,0.35)', borderRadius: 10, padding: '1.25rem 1.5rem' }}>
