@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
-              <img src="/logo.png" alt="WolvesLogic" style={{ height: 40, width: 'auto', objectFit: 'contain' }} />
+              <img src="/logo-symbol.png" alt="WolvesLogic" style={{ width: 40, height: 40, objectFit: 'contain' }} />
               <span style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, fontSize: 19, color: '#FFFFFF' }}>
                 Wolves<span style={{ color: '#C4797A' }}>Logic</span>
               </span>

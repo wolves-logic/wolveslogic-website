@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   keywords: "assignment help, IT services, job support, career guidance, online tutoring, WolvesLogic, Harviera IT Solutions",
   icons: {
     icon: '/logo-symbol.png',
-    shortcut: '/logo-symbol.png',
     apple: '/logo-symbol.png',
   },
   openGraph: {
