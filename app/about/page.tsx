@@ -64,7 +64,7 @@ export default function AboutPage() {
           aria-hidden="true"
           fill
           sizes="100vw"
-          style={{ objectFit: 'cover', opacity: 0.12 }}
+          style={{ objectFit: 'cover', opacity: 0.06, filter: 'grayscale(100%)' }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, #050a09 0%, rgba(5,10,9,0.55) 45%, #050a09 100%)' }} />
         <div className="glow-orb" style={{ width: 500, height: 500, background: 'rgba(61,122,116,0.18)', top: -100, right: -100 }} />
