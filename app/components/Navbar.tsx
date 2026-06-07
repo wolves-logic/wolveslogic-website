@@ -53,7 +53,7 @@ export default function Navbar() {
         <Link href="/" style={{
           display: 'flex',
           alignItems: 'center',
-          gap: 6,
+          gap: 2,
           textDecoration: 'none',
         }}>
           <img
